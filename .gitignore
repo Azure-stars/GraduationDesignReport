@@ -1,0 +1,20 @@
+docs/book
+## Editor
+*.swp
+*.swo
+Session.vim
+.cproject
+.idea
+*.iml
+.vscode
+.project
+.favorites.json
+.settings/
+
+
+## File system
+.DS_Store
+desktop.ini
+
+docs/mermaid-init.js
+docs/mermaid.min.js
