@@ -5,7 +5,7 @@ argparser.add_argument('-s', '--strace_log', type=str, help='strace log file')
 args = argparser.parse_args()
 
 STRACE_LOG = args.strace_log
-SYSCALL_LIST = []
+SYSCALL_LIST = set()
 
 with open(STRACE_LOG + '.log', 'r') as f:
     lines = f.readlines()
@@ -16,11 +16,13 @@ with open(STRACE_LOG + '.log', 'r') as f:
         if line[0].isdigit():
             line = line.split(' ', 1)[1]
         syscall = line.split('(')[0]
+        # Remove blank space for syscall
+        syscall = syscall.strip()
         # Remove useless information
-        if syscall.find('<') != -1 or syscall.find('+') != -1:
+        if syscall.find('<') != -1 or syscall.find('+') != -1 or syscall.find('?') != -1:
             continue
         if syscall not in SYSCALL_LIST:
-            SYSCALL_LIST.append(syscall)
+            SYSCALL_LIST.add(syscall)
 
 with open(STRACE_LOG + '_syscall_list.txt', 'w') as f:
     for syscall in SYSCALL_LIST:
