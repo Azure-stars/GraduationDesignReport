@@ -1,0 +1,331 @@
+<!DOCTYPE HTML>
+<html lang="cn" class="light sidebar-visible" dir="ltr">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>春季学期第 2 周 - Graduation Design Report by Azure-stars</title>
+
+
+        <!-- Custom HTML head -->
+
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="icon" href="favicon.svg">
+        <link rel="shortcut icon" href="favicon.png">
+        <link rel="stylesheet" href="css/variables.css">
+        <link rel="stylesheet" href="css/general.css">
+        <link rel="stylesheet" href="css/chrome.css">
+        <link rel="stylesheet" href="css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="highlight.css">
+        <link rel="stylesheet" href="tomorrow-night.css">
+        <link rel="stylesheet" href="ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+
+        <!-- Provide site root to javascript -->
+        <script>
+            var path_to_root = "";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+        <!-- Start loading toc.js asap -->
+        <script src="toc.js"></script>
+    </head>
+    <body>
+    <div id="body-container">
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            const html = document.documentElement;
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add("js");
+        </script>
+
+        <input type="checkbox" id="sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            var sidebar = null;
+            var sidebar_toggle = document.getElementById("sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+            }
+            sidebar_toggle.checked = sidebar === 'visible';
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <!-- populated by js -->
+            <mdbook-sidebar-scrollbox class="sidebar-scrollbox"></mdbook-sidebar-scrollbox>
+            <noscript>
+                <iframe class="sidebar-iframe-outer" src="toc.html"></iframe>
+            </noscript>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="sidebar-toggle" class="icon-button" for="sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </label>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">Graduation Design Report by Azure-stars</h1>
+
+                    <div class="right-buttons">
+                        <a href="print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                        <a href="https://github.com/Azure-stars/GraduationDesignReport" title="Git repository" aria-label="Git repository">
+                            <i id="git-repository-button" class="fa fa-github"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="春季学期第-2-周-3-月-3-日"><a class="header" href="#春季学期第-2-周-3-月-3-日">春季学期第 2 周 (3 月 3 日)</a></h1>
+<h2 id="abcoder-项目"><a class="header" href="#abcoder-项目">Abcoder 项目</a></h2>
+<h3 id="目标"><a class="header" href="#目标">目标</a></h3>
+<ul>
+<li>使用 Abcoder 对一些复杂项目进行解析，协助改进目前开源的 Abcoder 的功能</li>
+<li>了解 Abcoder 的原理和使用方式，并能够指导其他人使用</li>
+</ul>
+<h3 id="使用方法"><a class="header" href="#使用方法">使用方法</a></h3>
+<p>项目组给出了两种方法：Coze 和本地部署 ollama。我试了 Coze 并不是很稳定，而且还需要付钱。他们之前生成的 rcore 解析似乎是内部的模型 API 接口跑的，我直接在 Coze 平台上跑的模型能力和稳定性都不太行。所以我找了台服务器跑了 ollama，使用了 deepseek-coder-v2，并且手动将 context windows 调整到了 4k。速度还算过得去，并开始对 rust 项目进行解析。</p>
+<p>这里试的时候遇到了一些问题，简单记录一下：</p>
+<ul>
+<li>
+<p>本来是使用 llama3.2，但是这个模型不太行，所以换成了 deepseek 32b 模型。但是 deepseek32b 模型本身是一个 chat 模型，会进行所谓深度思考，然后输出的解析结果带了很多无用的思考内容，占用了篇幅的同时还让解析时间变慢。于是最后换成了 deepseek coder v2 模型。</p>
+</li>
+<li>
+<p>使用 ollama 跑 deepseek coder v2 的时候发现很多时候解析中断了， 看 log 发现是传入的 prompt 太长了超过了模型的 context windows。ollama 默认开了似乎是 2048 的 max-token，手动将这个模型改为了 4096 的 max-token，应该就没有太大问题了。</p>
+<blockquote>
+<p>context windows 大小 n 的平方和思考时间成正比，因此开太大也不太好。</p>
+</blockquote>
+</li>
+</ul>
+<p>具体的环境配置文档暂时不写，因为这些环境都是我临时找的，给其他人复现的可能性也不高。等之后决定给其他人使用的时候再说。</p>
+<p>在这里简单贴一下对于 abcoder 生成结果的解析内容。因为 abcoder 是直接调用了模型的输出然后存储在了一个 json 文件里面，需要提取有效信息并且将其转化为可视文件比如 Markdown。</p>
+<pre><code class="language-python"># demo.py
+def level_log(log, title):
+    print('#' * log + ' ' + title )
+
+import json
+# 需要将 abcoder 生成的结果存储在同目录下的 data.json 中
+with open('data.json', 'r') as f:
+    data = json.load(f)
+    for module in data['Modules']:
+        if data['Modules'][module]["Dir"] == "":
+            continue
+        level_log(1, module)
+        packages = data['Modules'][module]["Packages"]
+        for package in packages:
+            level_log(2, package)
+            print(packages[package]['compress_data'])
+            funcs = packages[package]['Functions']
+            level_log(3, "Functions")
+            for func in funcs:
+                level_log(4, func)
+                print(funcs[func]['compress_data'])
+            
+            level_log(3, "Vars")
+            vars = packages[package]['Vars']
+            for var in vars:
+                # print(var)
+                level_log(4, var)
+                print(vars[var]['compress_data'])
+</code></pre>
+<p>运行方式：</p>
+<pre><code class="language-sh">$ python3 demo.py &gt; result.md
+</code></pre>
+<h3 id="结果"><a class="header" href="#结果">结果</a></h3>
+<ul>
+<li>
+<p>先解析了一个自己写的简单 rust 项目：<a href="https://github.com/Azure-stars/dependencies-patch">dependencies-patch</a>。得到的结果详见 <a href="./dependencies.html">dependencies-parse</a></p>
+</li>
+<li>
+<p>然后最近会尝试开始解析 ArceOS 等内核，今天试了一下似乎有点慢。</p>
+</li>
+</ul>
+<h2 id="os-比赛支持"><a class="header" href="#os-比赛支持">OS 比赛支持</a></h2>
+<h3 id="内核测例多架构支持"><a class="header" href="#内核测例多架构支持">内核测例多架构支持</a></h3>
+<p>将 2025 初赛测例进行修改，编译为 x86_64/riscv64/aarch64/loongarch64 四个架构的镜像。</p>
+<ul>
+<li>测例仓库上<a href="https://github.com/oscomp/testsuits-for-oskernel/tree/2025_multiarch">2025_multiarch</a>目前可以支持同时编译生成 x86_64/riscv64/aarch64/loongarch64 四个架构的 Musl 和 glibc 测例。</li>
+<li>starry-next 仓库已经通过的 riscv64 和 loongarch64 测例也可以通过 x86_64 和 aarch64 的版本。</li>
+<li>预编译好的镜像发布在 <a href="https://github.com/Azure-stars/testsuits-for-oskernel/releases/tag/v0.1">2025年初赛SD卡镜像</a></li>
+</ul>
+<p>并且我提供了一个新的 docker 镜像。该镜像下可以支持编译比赛测例，并且运行 starry-next 内核，输出这些测例的运行信息。Docker 镜像对应的构建仓库详见 https://github.com/Azure-stars/os-contest-2024-image，可以为比赛平台评测机所用镜像和即将到来的 Github CICD 工作作参考。</p>
+<h3 id="内核测例-bug-修复"><a class="header" href="#内核测例-bug-修复">内核测例 Bug 修复</a></h3>
+<p><a href="https://github.com/oscomp/testsuits-for-oskernel/tree/pre-2025">pre-2025</a>分支为本年度赛事使用的初赛测例所在分支。经过和几位同学的测试，发现测例内存在一些 Bug，并通过 PR 或者直接 commit 的形式进行了修复。共提交了 4 次修复。</p>
+<h3 id="初赛测例分析"><a class="header" href="#初赛测例分析">初赛测例分析</a></h3>
+<p>在编译出 x86_64 的镜像之后，便可以在 Linux 主机上进行系统调用分析。通过解析 strace 生成的 log 可以快速得到测例在 Linux 下所需的 syscall 和相关的行为。</p>
+<p>以 <code>musl-busybox</code> 测例为例子，在 <code>sdcard/musl</code> 目录执行如下指令：</p>
+<pre><code class="language-sh">strace -f -e trace='!read,write,readv,writev,lseek,dup' -o strace_musl_busybox.log ./busybox sh ./busybox_testcode.sh
+</code></pre>
+<p>即可得到 busybox 调用的 log。</p>
+<blockquote>
+<p><code>-e trace='!read,write,readv,writev,lseek,dup</code> 是为了避免 LOG 中输出过内容导致文件过大。因为 IOZONE 等测例会执行非常多次相关的 syscall 进行 benchmark 测试，因此需要过滤掉这类 syscall。</p>
+</blockquote>
+<p>我们简单对这类 LOG 进行分析：</p>
+<pre><code class="language-python"># Description: Extract syscall list from strace log file
+import argparse
+argparser = argparse.ArgumentParser()
+argparser.add_argument('-s', '--strace_log', type=str, help='strace log file')
+args = argparser.parse_args()
+
+STRACE_LOG = args.strace_log
+SYSCALL_LIST = []
+
+with open(STRACE_LOG + '.log', 'r') as f:
+    lines = f.readlines()
+    for line in lines:
+        if '(' not in line:
+            continue
+        # If using strace -f to trace, the first field of each line is the pid, so we need to remove it
+        if line[0].isdigit():
+            line = line.split(' ', 1)[1]
+        syscall = line.split('(')[0]
+        # Remove useless information
+        if syscall.find('&lt;') != -1 or syscall.find('+') != -1:
+            continue
+        if syscall not in SYSCALL_LIST:
+            SYSCALL_LIST.append(syscall)
+
+with open(STRACE_LOG + '_syscall_list.txt', 'w') as f:
+    for syscall in SYSCALL_LIST:
+        f.write(syscall + '\n')
+</code></pre>
+<p>即可得到支持 busybox 测例所需要的 syscall 列表 <a href="https://github.com/Azure-stars/GraduationDesignReport/blob/main/parse_syscall/strace_musl_busybox_syscall_list.txt">syscall_list</a>。</p>
+<p>对所有的测例进行统计，可以得到 musl 测例下所需要的 <a href="https://github.com/Azure-stars/GraduationDesignReport/blob/main/parse_syscall/strace_musl_testcases_syscall_list.txt">syscall list</a>。</p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="ch02-01.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next prefetch" href="appendix-00.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="ch02-01.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next prefetch" href="appendix-00.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+        <script src="ace.js"></script>
+        <script src="editor.js"></script>
+        <script src="mode-rust.js"></script>
+        <script src="theme-dawn.js"></script>
+        <script src="theme-tomorrow_night.js"></script>
+
+        <script src="elasticlunr.min.js"></script>
+        <script src="mark.min.js"></script>
+        <script src="searcher.js"></script>
+
+        <script src="clipboard.min.js"></script>
+        <script src="highlight.js"></script>
+        <script src="book.js"></script>
+
+        <!-- Custom JS scripts -->
+        <script src="mermaid.min.js"></script>
+        <script src="mermaid-init.js"></script>
+
+
+    </div>
+    </body>
+</html>
