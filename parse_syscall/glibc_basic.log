@@ -1,0 +1,174 @@
+Testing brk :
+========== START test_brk ==========
+Before alloc,heap pos: 2123210752
+After alloc,heap pos: 2123210752
+Alloc again,heap pos: 2123210752
+========== END test_brk ==========
+Testing chdir :
+========== START test_chdir ==========
+chdir ret: 0
+  current working dir : /code/basic/test_chdir
+========== END test_chdir ==========
+Testing clone :
+========== START test_clone ==========
+  Child says successfully!
+clone process successfully.
+pid:299
+========== END test_clone ==========
+Testing close :
+========== START test_close ==========
+  close 3 success.
+========== END test_close ==========
+Testing dup2 :
+========== START test_dup2 ==========
+  from fd 100
+========== END test_dup2 ==========
+Testing dup :
+========== START test_dup ==========
+  new fd is 3.
+========== END test_dup ==========
+Testing execve :
+========== START test_execve ==========
+  I am test_echo.
+execve success.
+========== END main ==========
+Testing exit :
+========== START test_exit ==========
+exit OK.
+========== END test_exit ==========
+Testing fork :
+========== START test_fork ==========
+  child process.
+  parent process. wstatus:0
+========== END test_fork ==========
+Testing fstat :
+========== START test_fstat ==========
+fstat ret: 0
+fstat: dev: 1797, inode: 42, mode: 1, nlink: 0, size: 52, atime: 1741229838, mtime: 1741190184, ctime: 1741190184
+========== END  ==========
+Testing getcwd :
+========== START test_getcwd ==========
+getcwd: /code/basic successfully!
+========== END test_getcwd ==========
+Testing getdents :
+========== START test_getdents ==========
+open fd:3
+getdents fd:512
+getdents success.
+exit
+
+========== END test_getdents ==========
+Testing getpid :
+========== START test_getpid ==========
+getpid success.
+pid = 311
+========== END test_getpid ==========
+Testing getppid :
+========== START test_getppid ==========
+  getppid success. ppid : 295
+========== END test_getppid ==========
+Testing gettimeofday :
+========== START test_gettimeofday ==========
+gettimeofday success.
+start:4667107, end:4667128
+interval: 21
+========== END test_gettimeofday ==========
+Testing mkdir_ :
+========== START test_mkdir ==========
+mkdir ret: 0
+  mkdir success.
+========== END test_mkdir ==========
+Testing mmap :
+========== START test_mmap ==========
+file len: 27
+mmap content:   Hello, mmap successfully!
+========== END  ==========
+Testing mount :
+========== START test_mount ==========
+Mounting dev:/dev/vda2 to ./mnt
+mount return: -2
+
+ --- Assert Fatal ! ---
+Testing munmap :
+========== START test_munmap ==========
+file len: 27
+munmap return: 0
+munmap successfully!
+========== END  ==========
+Testing openat :
+========== START test_openat ==========
+open dir fd: 3
+openat fd: 4
+openat success.
+========== END test_openat ==========
+Testing open :
+========== START test_open ==========
+Hi, this is a text file.
+syscalls testing success!
+
+========== END test_open ==========
+Testing pipe :
+========== START test_pipe ==========
+cpid: 321
+cpid: 0
+  Write to pipe successfully.
+
+========== END test_pipe ==========
+Testing read :
+========== START test_read ==========
+Hi, this is a text file.
+syscalls testing success!
+
+========== END test_read ==========
+Testing times :
+========== START test_times ==========
+mytimes success
+{tms_utime:0, tms_stime:0, tms_cutime:0, tms_cstime:0}
+========== END test_times ==========
+Testing umount :
+========== START test_umount ==========
+Mounting dev:/dev/vda2 to ./mnt
+mount return: -2
+========== END test_umount ==========
+Testing uname :
+========== START test_uname ==========
+Uname: Linux e58f2953ce77 6.8.0-52-generic #53~22.04.1-Ubuntu SMP PREEMPT_DYNAMIC Wed Jan 15 19:18:46 UTC 2 x86_64 (none)
+========== END test_uname ==========
+Testing unlink :
+========== START test_unlink ==========
+  unlink success!
+========== END test_unlink ==========
+Testing wait :
+========== START test_wait ==========
+This is child process
+wait child success.
+wstatus: 0
+========== END test_wait ==========
+Testing waitpid :
+========== START test_waitpid ==========
+This is child process
+waitpid successfully.
+wstatus: 3
+========== END test_waitpid ==========
+Testing write :
+========== START test_write ==========
+Hello operating system contest.
+========== END test_write ==========
+Testing yield :
+========== START test_yield ==========
+  I am child process: 333. iteration 0.
+  I am child process: 333. iteration 0.
+  I am child process: 333. iteration 0.
+  I am child process: 333. iteration 0.
+  I am child process: 333. iteration 0.
+  I am child process: 334. iteration 1.
+  I am child process: 334. iteration 1.
+  I am child process: 334. iteration 1.
+  I am child process: 334. iteration 1.
+  I am child process: 334. iteration 1.
+  I am child process: 335. iteration 2.
+  I am child process: 335. iteration 2.
+  I am child process: 335. iteration 2.
+  I am child process: 335. iteration 2.
+  I am child process: 335. iteration 2.
+========== END test_yield ==========

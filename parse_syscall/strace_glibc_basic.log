@@ -1,0 +1,788 @@
+328   execve("./busybox", ["./busybox", "sh", "./run-all.sh"], 0x7fffe8235888 /* 11 vars */) = 0
+328   brk(NULL)                         = 0x1bc49000
+328   brk(0x1bc49d40)                   = 0x1bc49d40
+328   arch_prctl(ARCH_SET_FS, 0x1bc493c0) = 0
+328   set_tid_address(0x1bc49690)       = 328
+328   set_robust_list(0x1bc496a0, 24)   = 0
+328   rseq(0x1bc49ce0, 0x20, 0, 0x53053053) = 0
+328   prlimit64(0, RLIMIT_STACK, NULL, {rlim_cur=8192*1024, rlim_max=RLIM64_INFINITY}) = 0
+328   readlink("/proc/self/exe", "/code/glibc/basic/busybox", 4096) = 25
+328   getrandom("\xae\x97\x4a\x4a\x8c\xfe\x64\xcf", 8, GRND_NONBLOCK) = 8
+328   brk(NULL)                         = 0x1bc49d40
+328   brk(0x1bc6ad40)                   = 0x1bc6ad40
+328   brk(0x1bc6b000)                   = 0x1bc6b000
+328   mprotect(0x624000, 28672, PROT_READ) = 0
+328   getuid()                          = 0
+328   getpid()                          = 328
+328   rt_sigaction(SIGCHLD, {sa_handler=0x54b523, sa_mask=~[RTMIN RT_1], sa_flags=SA_RESTORER, sa_restorer=0x4204d0}, NULL, 8) = 0
+328   getppid()                         = 325
+328   newfstatat(AT_FDCWD, "/code/glibc/basic", {st_mode=S_IFDIR|0755, st_size=1024, ...}, 0) = 0
+328   newfstatat(AT_FDCWD, ".", {st_mode=S_IFDIR|0755, st_size=1024, ...}, 0) = 0
+328   openat(AT_FDCWD, "./run-all.sh", O_RDONLY|O_CLOEXEC) = 3
+328   fcntl(3, F_DUPFD_CLOEXEC, 10)     = 10
+328   close(3)                          = 0
+328   rt_sigaction(SIGINT, NULL, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0
+328   rt_sigaction(SIGINT, {sa_handler=0x54b523, sa_mask=~[RTMIN RT_1], sa_flags=SA_RESTORER, sa_restorer=0x4204d0}, NULL, 8) = 0
+328   rt_sigaction(SIGQUIT, NULL, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0
+328   rt_sigaction(SIGQUIT, {sa_handler=SIG_IGN, sa_mask=~[RTMIN RT_1], sa_flags=SA_RESTORER, sa_restorer=0x4204d0}, NULL, 8) = 0
+328   rt_sigaction(SIGTERM, NULL, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0
+328   clone(child_stack=NULL, flags=CLONE_CHILD_CLEARTID|CLONE_CHILD_SETTID|SIGCHLD, child_tidptr=0x1bc49690) = 329
+328   wait4(-1,  <unfinished ...>
+329   set_robust_list(0x1bc496a0, 24)   = 0
+329   close(10)                         = 0
+329   rt_sigaction(SIGQUIT, {sa_handler=SIG_DFL, sa_mask=~[RTMIN RT_1], sa_flags=SA_RESTORER, sa_restorer=0x4204d0}, NULL, 8) = 0
+329   execve("./brk", ["./brk"], 0x1bc4b870 /* 11 vars */) = 0
+329   brk(NULL)                         = 0x57b643a61000
+329   mmap(NULL, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x78ac6efac000
+329   access("/etc/ld.so.preload", R_OK) = -1 ENOENT (No such file or directory)
+329   arch_prctl(ARCH_SET_FS, 0x78ac6efacf00) = 0
+329   set_tid_address(0x78ac6efad1d0)   = 329
+329   set_robust_list(0x78ac6efad1e0, 24) = 0
+329   rseq(0x78ac6efad820, 0x20, 0, 0x53053053) = 0
+329   brk(NULL)                         = 0x57b643a61000
+329   brk(0x43a61040)                   = 0x57b643a61000
+329   brk(NULL)                         = 0x57b643a61000
+329   brk(0x43a61040)                   = 0x57b643a61000
+329   brk(NULL)                         = 0x57b643a61000
+329   exit(0)                           = ?
+329   +++ exited with 0 +++
+328   <... wait4 resumed>[{WIFEXITED(s) && WEXITSTATUS(s) == 0}], 0, NULL) = 329
+328   --- SIGCHLD {si_signo=SIGCHLD, si_code=CLD_EXITED, si_pid=329, si_uid=0, si_status=0, si_utime=0, si_stime=0} ---
+328   rt_sigreturn({mask=[]})           = 329
+328   wait4(-1, 0x7ffde2c5939c, WNOHANG, NULL) = -1 ECHILD (No child processes)
+328   clone(child_stack=NULL, flags=CLONE_CHILD_CLEARTID|CLONE_CHILD_SETTID|SIGCHLD, child_tidptr=0x1bc49690) = 330
+330   set_robust_list(0x1bc496a0, 24)   = 0
+328   wait4(-1,  <unfinished ...>
+330   close(10)                         = 0
+330   rt_sigaction(SIGQUIT, {sa_handler=SIG_DFL, sa_mask=~[RTMIN RT_1], sa_flags=SA_RESTORER, sa_restorer=0x4204d0}, NULL, 8) = 0
+330   execve("./chdir", ["./chdir"], 0x1bc4b870 /* 11 vars */) = 0
+330   brk(NULL)                         = 0x62248a75e000
+330   mmap(NULL, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7aaeab63a000
+330   access("/etc/ld.so.preload", R_OK) = -1 ENOENT (No such file or directory)
+330   arch_prctl(ARCH_SET_FS, 0x7aaeab63af00) = 0
+330   set_tid_address(0x7aaeab63b1d0)   = 330
+330   set_robust_list(0x7aaeab63b1e0, 24) = 0
+330   rseq(0x7aaeab63b820, 0x20, 0, 0x53053053) = 0
+330   mkdirat(AT_FDCWD, "test_chdir", 0666) = -1 EEXIST (File exists)
+330   chdir("test_chdir")               = 0
+330   getcwd("/code/glibc/basic/test_chdir", 30) = 29
+330   exit(0)                           = ?
+330   +++ exited with 0 +++
+328   <... wait4 resumed>[{WIFEXITED(s) && WEXITSTATUS(s) == 0}], 0, NULL) = 330
+328   --- SIGCHLD {si_signo=SIGCHLD, si_code=CLD_EXITED, si_pid=330, si_uid=0, si_status=0, si_utime=0, si_stime=0} ---
+328   rt_sigreturn({mask=[]})           = 330
+328   wait4(-1, 0x7ffde2c5939c, WNOHANG, NULL) = -1 ECHILD (No child processes)
+328   clone(child_stack=NULL, flags=CLONE_CHILD_CLEARTID|CLONE_CHILD_SETTID|SIGCHLD, child_tidptr=0x1bc49690) = 331
+328   wait4(-1,  <unfinished ...>
+331   set_robust_list(0x1bc496a0, 24)   = 0
+331   close(10)                         = 0
+331   rt_sigaction(SIGQUIT, {sa_handler=SIG_DFL, sa_mask=~[RTMIN RT_1], sa_flags=SA_RESTORER, sa_restorer=0x4204d0}, NULL, 8) = 0
+331   execve("./clone", ["./clone"], 0x1bc4b870 /* 11 vars */) = 0
+331   brk(NULL)                         = 0x5bf04ad6f000
+331   mmap(NULL, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7cf8c9194000
+331   access("/etc/ld.so.preload", R_OK) = -1 ENOENT (No such file or directory)
+331   arch_prctl(ARCH_SET_FS, 0x7cf8c9194f00) = 0
+331   set_tid_address(0x7cf8c91951d0)   = 331
+331   set_robust_list(0x7cf8c91951e0, 24) = 0
+331   rseq(0x7cf8c9195820, 0x20, 0, 0x53053053) = 0
+331   clone(child_stack=0x5bf01563c838, flags=SIGCHLD) = 332
+331   wait4(-1,  <unfinished ...>
+332   exit(0)                           = ?
+332   +++ exited with 0 +++
+331   <... wait4 resumed>[{WIFEXITED(s) && WEXITSTATUS(s) == 0}], 0, NULL) = 332
+331   --- SIGCHLD {si_signo=SIGCHLD, si_code=CLD_EXITED, si_pid=332, si_uid=0, si_status=0, si_utime=0, si_stime=0} ---
+331   exit(0)                           = ?
+331   +++ exited with 0 +++
+328   <... wait4 resumed>[{WIFEXITED(s) && WEXITSTATUS(s) == 0}], 0, NULL) = 331
+328   --- SIGCHLD {si_signo=SIGCHLD, si_code=CLD_EXITED, si_pid=331, si_uid=0, si_status=0, si_utime=0, si_stime=0} ---
+328   rt_sigreturn({mask=[]})           = 331
+328   wait4(-1, 0x7ffde2c5939c, WNOHANG, NULL) = -1 ECHILD (No child processes)
+328   clone(child_stack=NULL, flags=CLONE_CHILD_CLEARTID|CLONE_CHILD_SETTID|SIGCHLD, child_tidptr=0x1bc49690) = 333
+328   wait4(-1,  <unfinished ...>
+333   set_robust_list(0x1bc496a0, 24)   = 0
+333   close(10)                         = 0
+333   rt_sigaction(SIGQUIT, {sa_handler=SIG_DFL, sa_mask=~[RTMIN RT_1], sa_flags=SA_RESTORER, sa_restorer=0x4204d0}, NULL, 8) = 0
+333   execve("./close", ["./close"], 0x1bc4b870 /* 11 vars */) = 0
+333   brk(NULL)                         = 0x5b8cc32e8000
+333   mmap(NULL, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x77647bccd000
+333   access("/etc/ld.so.preload", R_OK) = -1 ENOENT (No such file or directory)
+333   arch_prctl(ARCH_SET_FS, 0x77647bccdf00) = 0
+333   set_tid_address(0x77647bcce1d0)   = 333
+333   set_robust_list(0x77647bcce1e0, 24) = 0
+333   rseq(0x77647bcce820, 0x20, 0, 0x53053053) = 0
+333   openat(AT_FDCWD, "test_close.txt", O_RDWR|O_CREAT, 002) = 3
+333   close(3)                          = 0
+333   exit(0)                           = ?
+333   +++ exited with 0 +++
+328   <... wait4 resumed>[{WIFEXITED(s) && WEXITSTATUS(s) == 0}], 0, NULL) = 333
+328   --- SIGCHLD {si_signo=SIGCHLD, si_code=CLD_EXITED, si_pid=333, si_uid=0, si_status=0, si_utime=0, si_stime=0} ---
+328   rt_sigreturn({mask=[]})           = 333
+328   wait4(-1, 0x7ffde2c5939c, WNOHANG, NULL) = -1 ECHILD (No child processes)
+328   clone(child_stack=NULL, flags=CLONE_CHILD_CLEARTID|CLONE_CHILD_SETTID|SIGCHLD, child_tidptr=0x1bc49690) = 334
+334   set_robust_list(0x1bc496a0, 24 <unfinished ...>
+328   wait4(-1,  <unfinished ...>
+334   <... set_robust_list resumed>)    = 0
+334   close(10)                         = 0
+334   rt_sigaction(SIGQUIT, {sa_handler=SIG_DFL, sa_mask=~[RTMIN RT_1], sa_flags=SA_RESTORER, sa_restorer=0x4204d0}, NULL, 8) = 0
+334   execve("./dup2", ["./dup2"], 0x1bc4b870 /* 11 vars */) = 0
+334   brk(NULL)                         = 0x563b29d40000
+334   mmap(NULL, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x758f47931000
+334   access("/etc/ld.so.preload", R_OK) = -1 ENOENT (No such file or directory)
+334   arch_prctl(ARCH_SET_FS, 0x758f47931f00) = 0
+334   set_tid_address(0x758f479321d0)   = 334
+334   set_robust_list(0x758f479321e0, 24) = 0
+334   rseq(0x758f47932820, 0x20, 0, 0x53053053) = 0
+334   dup3(1, 100, 0)                   = 100
+334   exit(0)                           = ?
+334   +++ exited with 0 +++
+328   <... wait4 resumed>[{WIFEXITED(s) && WEXITSTATUS(s) == 0}], 0, NULL) = 334
+328   --- SIGCHLD {si_signo=SIGCHLD, si_code=CLD_EXITED, si_pid=334, si_uid=0, si_status=0, si_utime=0, si_stime=0} ---
+328   rt_sigreturn({mask=[]})           = 334
+328   wait4(-1, 0x7ffde2c5939c, WNOHANG, NULL) = -1 ECHILD (No child processes)
+328   clone(child_stack=NULL, flags=CLONE_CHILD_CLEARTID|CLONE_CHILD_SETTID|SIGCHLD, child_tidptr=0x1bc49690) = 335
+328   wait4(-1,  <unfinished ...>
+335   set_robust_list(0x1bc496a0, 24)   = 0
+335   close(10)                         = 0
+335   rt_sigaction(SIGQUIT, {sa_handler=SIG_DFL, sa_mask=~[RTMIN RT_1], sa_flags=SA_RESTORER, sa_restorer=0x4204d0}, NULL, 8) = 0
+335   execve("./dup", ["./dup"], 0x1bc4b870 /* 11 vars */) = 0
+335   brk(NULL)                         = 0x5c99206ca000
+335   mmap(NULL, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7c288c612000
+335   access("/etc/ld.so.preload", R_OK) = -1 ENOENT (No such file or directory)
+335   arch_prctl(ARCH_SET_FS, 0x7c288c612f00) = 0
+335   set_tid_address(0x7c288c6131d0)   = 335
+335   set_robust_list(0x7c288c6131e0, 24) = 0
+335   rseq(0x7c288c613820, 0x20, 0, 0x53053053) = 0
+335   exit(0)                           = ?
+335   +++ exited with 0 +++
+328   <... wait4 resumed>[{WIFEXITED(s) && WEXITSTATUS(s) == 0}], 0, NULL) = 335
+328   --- SIGCHLD {si_signo=SIGCHLD, si_code=CLD_EXITED, si_pid=335, si_uid=0, si_status=0, si_utime=0, si_stime=0} ---
+328   rt_sigreturn({mask=[]})           = 335
+328   wait4(-1, 0x7ffde2c5939c, WNOHANG, NULL) = -1 ECHILD (No child processes)
+328   clone(child_stack=NULL, flags=CLONE_CHILD_CLEARTID|CLONE_CHILD_SETTID|SIGCHLD, child_tidptr=0x1bc49690) = 336
+336   set_robust_list(0x1bc496a0, 24 <unfinished ...>
+328   wait4(-1,  <unfinished ...>
+336   <... set_robust_list resumed>)    = 0
+336   close(10)                         = 0
+336   rt_sigaction(SIGQUIT, {sa_handler=SIG_DFL, sa_mask=~[RTMIN RT_1], sa_flags=SA_RESTORER, sa_restorer=0x4204d0}, NULL, 8) = 0
+336   execve("./execve", ["./execve"], 0x1bc4b880 /* 11 vars */) = 0
+336   brk(NULL)                         = 0x5d647178f000
+336   mmap(NULL, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7621099d3000
+336   access("/etc/ld.so.preload", R_OK) = -1 ENOENT (No such file or directory)
+336   arch_prctl(ARCH_SET_FS, 0x7621099d3f00) = 0
+336   set_tid_address(0x7621099d41d0)   = 336
+336   set_robust_list(0x7621099d41e0, 24) = 0
+336   rseq(0x7621099d4820, 0x20, 0, 0x53053053) = 0
+336   execve("test_echo", ["test_echo"], 0x7ffc93088d38 /* 0 vars */) = 0
+336   brk(NULL)                         = 0x56889830d000
+336   mmap(NULL, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7aeff7321000
+336   access("/etc/ld.so.preload", R_OK) = -1 ENOENT (No such file or directory)
+336   arch_prctl(ARCH_SET_FS, 0x7aeff7321f00) = 0
+336   set_tid_address(0x7aeff73221d0)   = 336
+336   set_robust_list(0x7aeff73221e0, 24) = 0
+336   rseq(0x7aeff7322820, 0x20, 0, 0x53053053) = 0
+336   exit(0)                           = ?
+336   +++ exited with 0 +++
+328   <... wait4 resumed>[{WIFEXITED(s) && WEXITSTATUS(s) == 0}], 0, NULL) = 336
+328   --- SIGCHLD {si_signo=SIGCHLD, si_code=CLD_EXITED, si_pid=336, si_uid=0, si_status=0, si_utime=0, si_stime=0} ---
+328   rt_sigreturn({mask=[]})           = 336
+328   wait4(-1, 0x7ffde2c5939c, WNOHANG, NULL) = -1 ECHILD (No child processes)
+328   clone(child_stack=NULL, flags=CLONE_CHILD_CLEARTID|CLONE_CHILD_SETTID|SIGCHLD, child_tidptr=0x1bc49690) = 337
+328   wait4(-1,  <unfinished ...>
+337   set_robust_list(0x1bc496a0, 24)   = 0
+337   close(10)                         = 0
+337   rt_sigaction(SIGQUIT, {sa_handler=SIG_DFL, sa_mask=~[RTMIN RT_1], sa_flags=SA_RESTORER, sa_restorer=0x4204d0}, NULL, 8) = 0
+337   execve("./exit", ["./exit"], 0x1bc4b870 /* 11 vars */) = 0
+337   brk(NULL)                         = 0x60d3a2860000
+337   mmap(NULL, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x74cb43d68000
+337   access("/etc/ld.so.preload", R_OK) = -1 ENOENT (No such file or directory)
+337   arch_prctl(ARCH_SET_FS, 0x74cb43d68f00) = 0
+337   set_tid_address(0x74cb43d691d0)   = 337
+337   set_robust_list(0x74cb43d691e0, 24) = 0
+337   rseq(0x74cb43d69820, 0x20, 0, 0x53053053) = 0
+337   clone(child_stack=NULL, flags=SIGCHLD) = 338
+337   wait4(-1,  <unfinished ...>
+338   exit(0)                           = ?
+338   +++ exited with 0 +++
+337   <... wait4 resumed>[{WIFEXITED(s) && WEXITSTATUS(s) == 0}], 0, NULL) = 338
+337   --- SIGCHLD {si_signo=SIGCHLD, si_code=CLD_EXITED, si_pid=338, si_uid=0, si_status=0, si_utime=0, si_stime=0} ---
+337   exit(0)                           = ?
+337   +++ exited with 0 +++
+328   <... wait4 resumed>[{WIFEXITED(s) && WEXITSTATUS(s) == 0}], 0, NULL) = 337
+328   --- SIGCHLD {si_signo=SIGCHLD, si_code=CLD_EXITED, si_pid=337, si_uid=0, si_status=0, si_utime=0, si_stime=0} ---
+328   rt_sigreturn({mask=[]})           = 337
+328   wait4(-1, 0x7ffde2c5939c, WNOHANG, NULL) = -1 ECHILD (No child processes)
+328   clone(child_stack=NULL, flags=CLONE_CHILD_CLEARTID|CLONE_CHILD_SETTID|SIGCHLD, child_tidptr=0x1bc49690) = 339
+328   wait4(-1,  <unfinished ...>
+339   set_robust_list(0x1bc496a0, 24)   = 0
+339   close(10)                         = 0
+339   rt_sigaction(SIGQUIT, {sa_handler=SIG_DFL, sa_mask=~[RTMIN RT_1], sa_flags=SA_RESTORER, sa_restorer=0x4204d0}, NULL, 8) = 0
+339   execve("./fork", ["./fork"], 0x1bc4b870 /* 11 vars */) = 0
+339   brk(NULL)                         = 0x58665e027000
+339   mmap(NULL, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7e448f28a000
+339   access("/etc/ld.so.preload", R_OK) = -1 ENOENT (No such file or directory)
+339   arch_prctl(ARCH_SET_FS, 0x7e448f28af00) = 0
+339   set_tid_address(0x7e448f28b1d0)   = 339
+339   set_robust_list(0x7e448f28b1e0, 24) = 0
+339   rseq(0x7e448f28b820, 0x20, 0, 0x53053053) = 0
+339   clone(child_stack=NULL, flags=SIGCHLD) = 340
+339   wait4(-1,  <unfinished ...>
+340   exit(0)                           = ?
+340   +++ exited with 0 +++
+339   <... wait4 resumed>[{WIFEXITED(s) && WEXITSTATUS(s) == 0}], 0, NULL) = 340
+339   --- SIGCHLD {si_signo=SIGCHLD, si_code=CLD_EXITED, si_pid=340, si_uid=0, si_status=0, si_utime=0, si_stime=0} ---
+339   exit(0)                           = ?
+339   +++ exited with 0 +++
+328   <... wait4 resumed>[{WIFEXITED(s) && WEXITSTATUS(s) == 0}], 0, NULL) = 339
+328   --- SIGCHLD {si_signo=SIGCHLD, si_code=CLD_EXITED, si_pid=339, si_uid=0, si_status=0, si_utime=0, si_stime=0} ---
+328   rt_sigreturn({mask=[]})           = 339
+328   wait4(-1, 0x7ffde2c5939c, WNOHANG, NULL) = -1 ECHILD (No child processes)
+328   clone(child_stack=NULL, flags=CLONE_CHILD_CLEARTID|CLONE_CHILD_SETTID|SIGCHLD, child_tidptr=0x1bc49690) = 341
+328   wait4(-1,  <unfinished ...>
+341   set_robust_list(0x1bc496a0, 24)   = 0
+341   close(10)                         = 0
+341   rt_sigaction(SIGQUIT, {sa_handler=SIG_DFL, sa_mask=~[RTMIN RT_1], sa_flags=SA_RESTORER, sa_restorer=0x4204d0}, NULL, 8) = 0
+341   execve("./fstat", ["./fstat"], 0x1bc4b870 /* 11 vars */) = 0
+341   brk(NULL)                         = 0x5f14c36cd000
+341   mmap(NULL, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x754055911000
+341   access("/etc/ld.so.preload", R_OK) = -1 ENOENT (No such file or directory)
+341   arch_prctl(ARCH_SET_FS, 0x754055911f00) = 0
+341   set_tid_address(0x7540559121d0)   = 341
+341   set_robust_list(0x7540559121e0, 24) = 0
+341   rseq(0x754055912820, 0x20, 0, 0x53053053) = 0
+341   openat(AT_FDCWD, "./text.txt", O_RDONLY) = 3
+341   fstat(3, {st_mode=S_IFREG|0644, st_size=52, ...}) = 0
+341   exit(0)                           = ?
+341   +++ exited with 0 +++
+328   <... wait4 resumed>[{WIFEXITED(s) && WEXITSTATUS(s) == 0}], 0, NULL) = 341
+328   --- SIGCHLD {si_signo=SIGCHLD, si_code=CLD_EXITED, si_pid=341, si_uid=0, si_status=0, si_utime=0, si_stime=0} ---
+328   rt_sigreturn({mask=[]})           = 341
+328   wait4(-1, 0x7ffde2c5939c, WNOHANG, NULL) = -1 ECHILD (No child processes)
+328   clone(child_stack=NULL, flags=CLONE_CHILD_CLEARTID|CLONE_CHILD_SETTID|SIGCHLD, child_tidptr=0x1bc49690) = 342
+328   wait4(-1,  <unfinished ...>
+342   set_robust_list(0x1bc496a0, 24)   = 0
+342   close(10)                         = 0
+342   rt_sigaction(SIGQUIT, {sa_handler=SIG_DFL, sa_mask=~[RTMIN RT_1], sa_flags=SA_RESTORER, sa_restorer=0x4204d0}, NULL, 8) = 0
+342   execve("./getcwd", ["./getcwd"], 0x1bc4b880 /* 11 vars */) = 0
+342   brk(NULL)                         = 0x567c37ea7000
+342   mmap(NULL, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x753f4d8b4000
+342   access("/etc/ld.so.preload", R_OK) = -1 ENOENT (No such file or directory)
+342   arch_prctl(ARCH_SET_FS, 0x753f4d8b4f00) = 0
+342   set_tid_address(0x753f4d8b51d0)   = 342
+342   set_robust_list(0x753f4d8b51e0, 24) = 0
+342   rseq(0x753f4d8b5820, 0x20, 0, 0x53053053) = 0
+342   getcwd("/code/glibc/basic", 128)  = 18
+342   exit(0)                           = ?
+342   +++ exited with 0 +++
+328   <... wait4 resumed>[{WIFEXITED(s) && WEXITSTATUS(s) == 0}], 0, NULL) = 342
+328   --- SIGCHLD {si_signo=SIGCHLD, si_code=CLD_EXITED, si_pid=342, si_uid=0, si_status=0, si_utime=0, si_stime=0} ---
+328   rt_sigreturn({mask=[]})           = 342
+328   wait4(-1, 0x7ffde2c5939c, WNOHANG, NULL) = -1 ECHILD (No child processes)
+328   clone(child_stack=NULL, flags=CLONE_CHILD_CLEARTID|CLONE_CHILD_SETTID|SIGCHLD, child_tidptr=0x1bc49690) = 343
+328   wait4(-1,  <unfinished ...>
+343   set_robust_list(0x1bc496a0, 24)   = 0
+343   close(10)                         = 0
+343   rt_sigaction(SIGQUIT, {sa_handler=SIG_DFL, sa_mask=~[RTMIN RT_1], sa_flags=SA_RESTORER, sa_restorer=0x4204d0}, NULL, 8) = 0
+343   execve("./getdents", ["./getdents"], 0x1bc4b880 /* 11 vars */) = 0
+343   brk(NULL)                         = 0x5b410eeb1000
+343   mmap(NULL, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7602492b5000
+343   access("/etc/ld.so.preload", R_OK) = -1 ENOENT (No such file or directory)
+343   arch_prctl(ARCH_SET_FS, 0x7602492b5f00) = 0
+343   set_tid_address(0x7602492b61d0)   = 343
+343   set_robust_list(0x7602492b61e0, 24) = 0
+343   rseq(0x7602492b6820, 0x20, 0, 0x53053053) = 0
+343   openat(AT_FDCWD, ".", O_RDONLY)   = 3
+343   getdents64(3, 0x5b40f1ac0400 /* 18 entries */, 512) = 512
+343   close(3)                          = 0
+343   exit(0)                           = ?
+343   +++ exited with 0 +++
+328   <... wait4 resumed>[{WIFEXITED(s) && WEXITSTATUS(s) == 0}], 0, NULL) = 343
+328   --- SIGCHLD {si_signo=SIGCHLD, si_code=CLD_EXITED, si_pid=343, si_uid=0, si_status=0, si_utime=0, si_stime=0} ---
+328   rt_sigreturn({mask=[]})           = 343
+328   wait4(-1, 0x7ffde2c5939c, WNOHANG, NULL) = -1 ECHILD (No child processes)
+328   clone(child_stack=NULL, flags=CLONE_CHILD_CLEARTID|CLONE_CHILD_SETTID|SIGCHLD, child_tidptr=0x1bc49690) = 344
+328   wait4(-1,  <unfinished ...>
+344   set_robust_list(0x1bc496a0, 24)   = 0
+344   close(10)                         = 0
+344   rt_sigaction(SIGQUIT, {sa_handler=SIG_DFL, sa_mask=~[RTMIN RT_1], sa_flags=SA_RESTORER, sa_restorer=0x4204d0}, NULL, 8) = 0
+344   execve("./getpid", ["./getpid"], 0x1bc4b880 /* 11 vars */) = 0
+344   brk(NULL)                         = 0x63b602f73000
+344   mmap(NULL, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x71e0503db000
+344   access("/etc/ld.so.preload", R_OK) = -1 ENOENT (No such file or directory)
+344   arch_prctl(ARCH_SET_FS, 0x71e0503dbf00) = 0
+344   set_tid_address(0x71e0503dc1d0)   = 344
+344   set_robust_list(0x71e0503dc1e0, 24) = 0
+344   rseq(0x71e0503dc820, 0x20, 0, 0x53053053) = 0
+344   getpid()                          = 344
+344   exit(0)                           = ?
+344   +++ exited with 0 +++
+328   <... wait4 resumed>[{WIFEXITED(s) && WEXITSTATUS(s) == 0}], 0, NULL) = 344
+328   --- SIGCHLD {si_signo=SIGCHLD, si_code=CLD_EXITED, si_pid=344, si_uid=0, si_status=0, si_utime=0, si_stime=0} ---
+328   rt_sigreturn({mask=[]})           = 344
+328   wait4(-1, 0x7ffde2c5939c, WNOHANG, NULL) = -1 ECHILD (No child processes)
+328   clone(child_stack=NULL, flags=CLONE_CHILD_CLEARTID|CLONE_CHILD_SETTID|SIGCHLD, child_tidptr=0x1bc49690) = 345
+345   set_robust_list(0x1bc496a0, 24 <unfinished ...>
+328   wait4(-1,  <unfinished ...>
+345   <... set_robust_list resumed>)    = 0
+345   close(10)                         = 0
+345   rt_sigaction(SIGQUIT, {sa_handler=SIG_DFL, sa_mask=~[RTMIN RT_1], sa_flags=SA_RESTORER, sa_restorer=0x4204d0}, NULL, 8) = 0
+345   execve("./getppid", ["./getppid"], 0x1bc4b880 /* 11 vars */) = 0
+345   brk(NULL)                         = 0x63530677c000
+345   mmap(NULL, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x785204ded000
+345   access("/etc/ld.so.preload", R_OK) = -1 ENOENT (No such file or directory)
+345   arch_prctl(ARCH_SET_FS, 0x785204dedf00) = 0
+345   set_tid_address(0x785204dee1d0)   = 345
+345   set_robust_list(0x785204dee1e0, 24) = 0
+345   rseq(0x785204dee820, 0x20, 0, 0x53053053) = 0
+345   getppid()                         = 328
+345   exit(0)                           = ?
+345   +++ exited with 0 +++
+328   <... wait4 resumed>[{WIFEXITED(s) && WEXITSTATUS(s) == 0}], 0, NULL) = 345
+328   --- SIGCHLD {si_signo=SIGCHLD, si_code=CLD_EXITED, si_pid=345, si_uid=0, si_status=0, si_utime=0, si_stime=0} ---
+328   rt_sigreturn({mask=[]})           = 345
+328   wait4(-1, 0x7ffde2c5939c, WNOHANG, NULL) = -1 ECHILD (No child processes)
+328   clone(child_stack=NULL, flags=CLONE_CHILD_CLEARTID|CLONE_CHILD_SETTID|SIGCHLD, child_tidptr=0x1bc49690) = 346
+328   wait4(-1,  <unfinished ...>
+346   set_robust_list(0x1bc496a0, 24)   = 0
+346   close(10)                         = 0
+346   rt_sigaction(SIGQUIT, {sa_handler=SIG_DFL, sa_mask=~[RTMIN RT_1], sa_flags=SA_RESTORER, sa_restorer=0x4204d0}, NULL, 8) = 0
+346   execve("./gettimeofday", ["./gettimeofday"], 0x1bc4b890 /* 11 vars */) = 0
+346   brk(NULL)                         = 0x64d66752e000
+346   mmap(NULL, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x71d4ed76e000
+346   access("/etc/ld.so.preload", R_OK) = -1 ENOENT (No such file or directory)
+346   arch_prctl(ARCH_SET_FS, 0x71d4ed76ef00) = 0
+346   set_tid_address(0x71d4ed76f1d0)   = 346
+346   set_robust_list(0x71d4ed76f1e0, 24) = 0
+346   rseq(0x71d4ed76f820, 0x20, 0, 0x53053053) = 0
+346   gettimeofday({tv_sec=1741246262, tv_usec=176079}, NULL) = 0
+346   gettimeofday({tv_sec=1741246262, tv_usec=196792}, NULL) = 0
+346   exit(0)                           = ?
+346   +++ exited with 0 +++
+328   <... wait4 resumed>[{WIFEXITED(s) && WEXITSTATUS(s) == 0}], 0, NULL) = 346
+328   --- SIGCHLD {si_signo=SIGCHLD, si_code=CLD_EXITED, si_pid=346, si_uid=0, si_status=0, si_utime=2 /* 0.02 s */, si_stime=0} ---
+328   rt_sigreturn({mask=[]})           = 346
+328   wait4(-1, 0x7ffde2c5939c, WNOHANG, NULL) = -1 ECHILD (No child processes)
+328   clone(child_stack=NULL, flags=CLONE_CHILD_CLEARTID|CLONE_CHILD_SETTID|SIGCHLD, child_tidptr=0x1bc49690) = 347
+347   set_robust_list(0x1bc496a0, 24)   = 0
+328   wait4(-1,  <unfinished ...>
+347   close(10)                         = 0
+347   rt_sigaction(SIGQUIT, {sa_handler=SIG_DFL, sa_mask=~[RTMIN RT_1], sa_flags=SA_RESTORER, sa_restorer=0x4204d0}, NULL, 8) = 0
+347   execve("./mkdir_", ["./mkdir_"], 0x1bc4b880 /* 11 vars */) = 0
+347   brk(NULL)                         = 0x62d9ae302000
+347   mmap(NULL, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7abc45a92000
+347   access("/etc/ld.so.preload", R_OK) = -1 ENOENT (No such file or directory)
+347   arch_prctl(ARCH_SET_FS, 0x7abc45a92f00) = 0
+347   set_tid_address(0x7abc45a931d0)   = 347
+347   set_robust_list(0x7abc45a931e0, 24) = 0
+347   rseq(0x7abc45a93820, 0x20, 0, 0x53053053) = 0
+347   mkdirat(AT_FDCWD, "test_mkdir", 0666) = -1 EEXIST (File exists)
+347   openat(AT_FDCWD, "test_mkdir", O_RDONLY|O_DIRECTORY) = 3
+347   close(3)                          = 0
+347   exit(0)                           = ?
+347   +++ exited with 0 +++
+328   <... wait4 resumed>[{WIFEXITED(s) && WEXITSTATUS(s) == 0}], 0, NULL) = 347
+328   --- SIGCHLD {si_signo=SIGCHLD, si_code=CLD_EXITED, si_pid=347, si_uid=0, si_status=0, si_utime=0, si_stime=0} ---
+328   rt_sigreturn({mask=[]})           = 347
+328   wait4(-1, 0x7ffde2c5939c, WNOHANG, NULL) = -1 ECHILD (No child processes)
+328   clone(child_stack=NULL, flags=CLONE_CHILD_CLEARTID|CLONE_CHILD_SETTID|SIGCHLD, child_tidptr=0x1bc49690) = 348
+328   wait4(-1,  <unfinished ...>
+348   set_robust_list(0x1bc496a0, 24)   = 0
+348   close(10)                         = 0
+348   rt_sigaction(SIGQUIT, {sa_handler=SIG_DFL, sa_mask=~[RTMIN RT_1], sa_flags=SA_RESTORER, sa_restorer=0x4204d0}, NULL, 8) = 0
+348   execve("./mmap", ["./mmap"], 0x1bc4b870 /* 11 vars */) = 0
+348   brk(NULL)                         = 0x557937f78000
+348   mmap(NULL, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7e07161d1000
+348   access("/etc/ld.so.preload", R_OK) = -1 ENOENT (No such file or directory)
+348   arch_prctl(ARCH_SET_FS, 0x7e07161d1f00) = 0
+348   set_tid_address(0x7e07161d21d0)   = 348
+348   set_robust_list(0x7e07161d21e0, 24) = 0
+348   rseq(0x7e07161d2820, 0x20, 0, 0x53053053) = 0
+348   openat(AT_FDCWD, "test_mmap.txt", O_RDWR|O_CREAT, 002) = 3
+348   fstat(3, {st_mode=S_IFREG|000, st_size=27, ...}) = 0
+348   mmap(NULL, 27, PROT_READ|PROT_WRITE, MAP_SHARED, 3, 0) = 0x7e07161d0000
+348   munmap(0x7e07161d0000, 27)        = 0
+348   close(3)                          = 0
+348   exit(0)                           = ?
+348   +++ exited with 0 +++
+328   <... wait4 resumed>[{WIFEXITED(s) && WEXITSTATUS(s) == 0}], 0, NULL) = 348
+328   --- SIGCHLD {si_signo=SIGCHLD, si_code=CLD_EXITED, si_pid=348, si_uid=0, si_status=0, si_utime=0, si_stime=0} ---
+328   rt_sigreturn({mask=[]})           = 348
+328   wait4(-1, 0x7ffde2c5939c, WNOHANG, NULL) = -1 ECHILD (No child processes)
+328   clone(child_stack=NULL, flags=CLONE_CHILD_CLEARTID|CLONE_CHILD_SETTID|SIGCHLD, child_tidptr=0x1bc49690) = 349
+328   wait4(-1,  <unfinished ...>
+349   set_robust_list(0x1bc496a0, 24)   = 0
+349   close(10)                         = 0
+349   rt_sigaction(SIGQUIT, {sa_handler=SIG_DFL, sa_mask=~[RTMIN RT_1], sa_flags=SA_RESTORER, sa_restorer=0x4204d0}, NULL, 8) = 0
+349   execve("./mount", ["./mount"], 0x1bc4b870 /* 11 vars */) = 0
+349   brk(NULL)                         = 0x55ce9c656000
+349   mmap(NULL, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7863285bd000
+349   access("/etc/ld.so.preload", R_OK) = -1 ENOENT (No such file or directory)
+349   arch_prctl(ARCH_SET_FS, 0x7863285bdf00) = 0
+349   set_tid_address(0x7863285be1d0)   = 349
+349   set_robust_list(0x7863285be1e0, 24) = 0
+349   rseq(0x7863285be820, 0x20, 0, 0x53053053) = 0
+349   mount("/dev/vda2", "./mnt", "vfat", 0, NULL) = -1 ENOENT (No such file or directory)
+349   exit(-100)                        = ?
+349   +++ exited with 156 +++
+328   <... wait4 resumed>[{WIFEXITED(s) && WEXITSTATUS(s) == 156}], 0, NULL) = 349
+328   --- SIGCHLD {si_signo=SIGCHLD, si_code=CLD_EXITED, si_pid=349, si_uid=0, si_status=156, si_utime=0, si_stime=0} ---
+328   rt_sigreturn({mask=[]})           = 349
+328   wait4(-1, 0x7ffde2c5939c, WNOHANG, NULL) = -1 ECHILD (No child processes)
+328   clone(child_stack=NULL, flags=CLONE_CHILD_CLEARTID|CLONE_CHILD_SETTID|SIGCHLD, child_tidptr=0x1bc49690) = 350
+328   wait4(-1,  <unfinished ...>
+350   set_robust_list(0x1bc496a0, 24)   = 0
+350   close(10)                         = 0
+350   rt_sigaction(SIGQUIT, {sa_handler=SIG_DFL, sa_mask=~[RTMIN RT_1], sa_flags=SA_RESTORER, sa_restorer=0x4204d0}, NULL, 8) = 0
+350   execve("./munmap", ["./munmap"], 0x1bc4b880 /* 11 vars */) = 0
+350   brk(NULL)                         = 0x55f00f148000
+350   mmap(NULL, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7b1b34df8000
+350   access("/etc/ld.so.preload", R_OK) = -1 ENOENT (No such file or directory)
+350   arch_prctl(ARCH_SET_FS, 0x7b1b34df8f00) = 0
+350   set_tid_address(0x7b1b34df91d0)   = 350
+350   set_robust_list(0x7b1b34df91e0, 24) = 0
+350   rseq(0x7b1b34df9820, 0x20, 0, 0x53053053) = 0
+350   openat(AT_FDCWD, "test_mmap.txt", O_RDWR|O_CREAT, 002) = 3
+350   fstat(3, {st_mode=S_IFREG|000, st_size=27, ...}) = 0
+350   mmap(NULL, 27, PROT_READ|PROT_WRITE, MAP_SHARED, 3, 0) = 0x7b1b34df7000
+350   munmap(0x7b1b34df7000, 27)        = 0
+350   close(3)                          = 0
+350   exit(0)                           = ?
+350   +++ exited with 0 +++
+328   <... wait4 resumed>[{WIFEXITED(s) && WEXITSTATUS(s) == 0}], 0, NULL) = 350
+328   --- SIGCHLD {si_signo=SIGCHLD, si_code=CLD_EXITED, si_pid=350, si_uid=0, si_status=0, si_utime=0, si_stime=0} ---
+328   rt_sigreturn({mask=[]})           = 350
+328   wait4(-1, 0x7ffde2c5939c, WNOHANG, NULL) = -1 ECHILD (No child processes)
+328   clone(child_stack=NULL, flags=CLONE_CHILD_CLEARTID|CLONE_CHILD_SETTID|SIGCHLD, child_tidptr=0x1bc49690) = 351
+328   wait4(-1,  <unfinished ...>
+351   set_robust_list(0x1bc496a0, 24)   = 0
+351   close(10)                         = 0
+351   rt_sigaction(SIGQUIT, {sa_handler=SIG_DFL, sa_mask=~[RTMIN RT_1], sa_flags=SA_RESTORER, sa_restorer=0x4204d0}, NULL, 8) = 0
+351   execve("./openat", ["./openat"], 0x1bc4b880 /* 11 vars */) = 0
+351   brk(NULL)                         = 0x588a48c27000
+351   mmap(NULL, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7689b0a02000
+351   access("/etc/ld.so.preload", R_OK) = -1 ENOENT (No such file or directory)
+351   arch_prctl(ARCH_SET_FS, 0x7689b0a02f00) = 0
+351   set_tid_address(0x7689b0a031d0)   = 351
+351   set_robust_list(0x7689b0a031e0, 24) = 0
+351   rseq(0x7689b0a03820, 0x20, 0, 0x53053053) = 0
+351   openat(AT_FDCWD, "./mnt", O_RDONLY|O_DIRECTORY) = 3
+351   openat(3, "test_openat.txt", O_RDWR|O_CREAT, 0600) = 4
+351   close(4)                          = 0
+351   exit(0)                           = ?
+351   +++ exited with 0 +++
+328   <... wait4 resumed>[{WIFEXITED(s) && WEXITSTATUS(s) == 0}], 0, NULL) = 351
+328   --- SIGCHLD {si_signo=SIGCHLD, si_code=CLD_EXITED, si_pid=351, si_uid=0, si_status=0, si_utime=0, si_stime=0} ---
+328   rt_sigreturn({mask=[]})           = 351
+328   wait4(-1, 0x7ffde2c5939c, WNOHANG, NULL) = -1 ECHILD (No child processes)
+328   clone(child_stack=NULL, flags=CLONE_CHILD_CLEARTID|CLONE_CHILD_SETTID|SIGCHLD, child_tidptr=0x1bc49690) = 352
+328   wait4(-1,  <unfinished ...>
+352   set_robust_list(0x1bc496a0, 24)   = 0
+352   close(10)                         = 0
+352   rt_sigaction(SIGQUIT, {sa_handler=SIG_DFL, sa_mask=~[RTMIN RT_1], sa_flags=SA_RESTORER, sa_restorer=0x4204d0}, NULL, 8) = 0
+352   execve("./open", ["./open"], 0x1bc4b870 /* 11 vars */) = 0
+352   brk(NULL)                         = 0x5b4a7d023000
+352   mmap(NULL, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7cfdaa102000
+352   access("/etc/ld.so.preload", R_OK) = -1 ENOENT (No such file or directory)
+352   arch_prctl(ARCH_SET_FS, 0x7cfdaa102f00) = 0
+352   set_tid_address(0x7cfdaa1031d0)   = 352
+352   set_robust_list(0x7cfdaa1031e0, 24) = 0
+352   rseq(0x7cfdaa103820, 0x20, 0, 0x53053053) = 0
+352   openat(AT_FDCWD, "./text.txt", O_RDONLY) = 3
+352   close(3)                          = 0
+352   exit(0)                           = ?
+352   +++ exited with 0 +++
+328   <... wait4 resumed>[{WIFEXITED(s) && WEXITSTATUS(s) == 0}], 0, NULL) = 352
+328   --- SIGCHLD {si_signo=SIGCHLD, si_code=CLD_EXITED, si_pid=352, si_uid=0, si_status=0, si_utime=0, si_stime=0} ---
+328   rt_sigreturn({mask=[]})           = 352
+328   wait4(-1, 0x7ffde2c5939c, WNOHANG, NULL) = -1 ECHILD (No child processes)
+328   clone(child_stack=NULL, flags=CLONE_CHILD_CLEARTID|CLONE_CHILD_SETTID|SIGCHLD, child_tidptr=0x1bc49690) = 353
+353   set_robust_list(0x1bc496a0, 24 <unfinished ...>
+328   wait4(-1,  <unfinished ...>
+353   <... set_robust_list resumed>)    = 0
+353   close(10)                         = 0
+353   rt_sigaction(SIGQUIT, {sa_handler=SIG_DFL, sa_mask=~[RTMIN RT_1], sa_flags=SA_RESTORER, sa_restorer=0x4204d0}, NULL, 8) = 0
+353   execve("./pipe", ["./pipe"], 0x1bc4b870 /* 11 vars */) = 0
+353   brk(NULL)                         = 0x5dba87cbe000
+353   mmap(NULL, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x72226d21b000
+353   access("/etc/ld.so.preload", R_OK) = -1 ENOENT (No such file or directory)
+353   arch_prctl(ARCH_SET_FS, 0x72226d21bf00) = 0
+353   set_tid_address(0x72226d21c1d0)   = 353
+353   set_robust_list(0x72226d21c1e0, 24) = 0
+353   rseq(0x72226d21c820, 0x20, 0, 0x53053053) = 0
+353   pipe2([3, 4], 0)                  = 0
+353   clone(child_stack=NULL, flags=SIGCHLD) = 354
+354   close(3 <unfinished ...>
+353   close(4 <unfinished ...>
+354   <... close resumed>)              = 0
+353   <... close resumed>)              = 0
+354   close(4)                          = 0
+354   exit(0)                           = ?
+354   +++ exited with 0 +++
+353   --- SIGCHLD {si_signo=SIGCHLD, si_code=CLD_EXITED, si_pid=354, si_uid=0, si_status=0, si_utime=0, si_stime=0} ---
+353   close(3)                          = 0
+353   wait4(-1, NULL, 0, NULL)          = 354
+353   exit(0)                           = ?
+353   +++ exited with 0 +++
+328   <... wait4 resumed>[{WIFEXITED(s) && WEXITSTATUS(s) == 0}], 0, NULL) = 353
+328   --- SIGCHLD {si_signo=SIGCHLD, si_code=CLD_EXITED, si_pid=353, si_uid=0, si_status=0, si_utime=0, si_stime=0} ---
+328   rt_sigreturn({mask=[]})           = 353
+328   wait4(-1, 0x7ffde2c5939c, WNOHANG, NULL) = -1 ECHILD (No child processes)
+328   clone(child_stack=NULL, flags=CLONE_CHILD_CLEARTID|CLONE_CHILD_SETTID|SIGCHLD, child_tidptr=0x1bc49690) = 355
+328   wait4(-1,  <unfinished ...>
+355   set_robust_list(0x1bc496a0, 24)   = 0
+355   close(10)                         = 0
+355   rt_sigaction(SIGQUIT, {sa_handler=SIG_DFL, sa_mask=~[RTMIN RT_1], sa_flags=SA_RESTORER, sa_restorer=0x4204d0}, NULL, 8) = 0
+355   execve("./read", ["./read"], 0x1bc4b870 /* 11 vars */) = 0
+355   brk(NULL)                         = 0x63dabc03a000
+355   mmap(NULL, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7b247e93a000
+355   access("/etc/ld.so.preload", R_OK) = -1 ENOENT (No such file or directory)
+355   arch_prctl(ARCH_SET_FS, 0x7b247e93af00) = 0
+355   set_tid_address(0x7b247e93b1d0)   = 355
+355   set_robust_list(0x7b247e93b1e0, 24) = 0
+355   rseq(0x7b247e93b820, 0x20, 0, 0x53053053) = 0
+355   openat(AT_FDCWD, "./text.txt", O_RDONLY) = 3
+355   close(3)                          = 0
+355   exit(0)                           = ?
+355   +++ exited with 0 +++
+328   <... wait4 resumed>[{WIFEXITED(s) && WEXITSTATUS(s) == 0}], 0, NULL) = 355
+328   --- SIGCHLD {si_signo=SIGCHLD, si_code=CLD_EXITED, si_pid=355, si_uid=0, si_status=0, si_utime=0, si_stime=0} ---
+328   rt_sigreturn({mask=[]})           = 355
+328   wait4(-1, 0x7ffde2c5939c, WNOHANG, NULL) = -1 ECHILD (No child processes)
+328   clone(child_stack=NULL, flags=CLONE_CHILD_CLEARTID|CLONE_CHILD_SETTID|SIGCHLD, child_tidptr=0x1bc49690) = 356
+328   wait4(-1,  <unfinished ...>
+356   set_robust_list(0x1bc496a0, 24)   = 0
+356   close(10)                         = 0
+356   rt_sigaction(SIGQUIT, {sa_handler=SIG_DFL, sa_mask=~[RTMIN RT_1], sa_flags=SA_RESTORER, sa_restorer=0x4204d0}, NULL, 8) = 0
+356   execve("./times", ["./times"], 0x1bc4b870 /* 11 vars */) = 0
+356   brk(NULL)                         = 0x6378460c6000
+356   mmap(NULL, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x79c1dfab1000
+356   access("/etc/ld.so.preload", R_OK) = -1 ENOENT (No such file or directory)
+356   arch_prctl(ARCH_SET_FS, 0x79c1dfab1f00) = 0
+356   set_tid_address(0x79c1dfab21d0)   = 356
+356   set_robust_list(0x79c1dfab21e0, 24) = 0
+356   rseq(0x79c1dfab2820, 0x20, 0, 0x53053053) = 0
+356   times({tms_utime=0, tms_stime=0, tms_cutime=0, tms_cstime=0}) = 446622216
+356   exit(0)                           = ?
+356   +++ exited with 0 +++
+328   <... wait4 resumed>[{WIFEXITED(s) && WEXITSTATUS(s) == 0}], 0, NULL) = 356
+328   --- SIGCHLD {si_signo=SIGCHLD, si_code=CLD_EXITED, si_pid=356, si_uid=0, si_status=0, si_utime=0, si_stime=0} ---
+328   rt_sigreturn({mask=[]})           = 356
+328   wait4(-1, 0x7ffde2c5939c, WNOHANG, NULL) = -1 ECHILD (No child processes)
+328   clone(child_stack=NULL, flags=CLONE_CHILD_CLEARTID|CLONE_CHILD_SETTID|SIGCHLD, child_tidptr=0x1bc49690) = 357
+328   wait4(-1,  <unfinished ...>
+357   set_robust_list(0x1bc496a0, 24)   = 0
+357   close(10)                         = 0
+357   rt_sigaction(SIGQUIT, {sa_handler=SIG_DFL, sa_mask=~[RTMIN RT_1], sa_flags=SA_RESTORER, sa_restorer=0x4204d0}, NULL, 8) = 0
+357   execve("./umount", ["./umount"], 0x1bc4b880 /* 11 vars */) = 0
+357   brk(NULL)                         = 0x5bcee6e0a000
+357   mmap(NULL, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7487cf307000
+357   access("/etc/ld.so.preload", R_OK) = -1 ENOENT (No such file or directory)
+357   arch_prctl(ARCH_SET_FS, 0x7487cf307f00) = 0
+357   set_tid_address(0x7487cf3081d0)   = 357
+357   set_robust_list(0x7487cf3081e0, 24) = 0
+357   rseq(0x7487cf308820, 0x20, 0, 0x53053053) = 0
+357   mount("/dev/vda2", "./mnt", "vfat", 0, NULL) = -1 ENOENT (No such file or directory)
+357   exit(0)                           = ?
+357   +++ exited with 0 +++
+328   <... wait4 resumed>[{WIFEXITED(s) && WEXITSTATUS(s) == 0}], 0, NULL) = 357
+328   --- SIGCHLD {si_signo=SIGCHLD, si_code=CLD_EXITED, si_pid=357, si_uid=0, si_status=0, si_utime=0, si_stime=0} ---
+328   rt_sigreturn({mask=[]})           = 357
+328   wait4(-1, 0x7ffde2c5939c, WNOHANG, NULL) = -1 ECHILD (No child processes)
+328   clone(child_stack=NULL, flags=CLONE_CHILD_CLEARTID|CLONE_CHILD_SETTID|SIGCHLD, child_tidptr=0x1bc49690) = 358
+328   wait4(-1,  <unfinished ...>
+358   set_robust_list(0x1bc496a0, 24)   = 0
+358   close(10)                         = 0
+358   rt_sigaction(SIGQUIT, {sa_handler=SIG_DFL, sa_mask=~[RTMIN RT_1], sa_flags=SA_RESTORER, sa_restorer=0x4204d0}, NULL, 8) = 0
+358   execve("./uname", ["./uname"], 0x1bc4b870 /* 11 vars */) = 0
+358   brk(NULL)                         = 0x5712c304b000
+358   mmap(NULL, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7e79e4248000
+358   access("/etc/ld.so.preload", R_OK) = -1 ENOENT (No such file or directory)
+358   arch_prctl(ARCH_SET_FS, 0x7e79e4248f00) = 0
+358   set_tid_address(0x7e79e42491d0)   = 358
+358   set_robust_list(0x7e79e42491e0, 24) = 0
+358   rseq(0x7e79e4249820, 0x20, 0, 0x53053053) = 0
+358   uname({sysname="Linux", nodename="519485b23381", ...}) = 0
+358   exit(0)                           = ?
+358   +++ exited with 0 +++
+328   <... wait4 resumed>[{WIFEXITED(s) && WEXITSTATUS(s) == 0}], 0, NULL) = 358
+328   --- SIGCHLD {si_signo=SIGCHLD, si_code=CLD_EXITED, si_pid=358, si_uid=0, si_status=0, si_utime=0, si_stime=0} ---
+328   rt_sigreturn({mask=[]})           = 358
+328   wait4(-1, 0x7ffde2c5939c, WNOHANG, NULL) = -1 ECHILD (No child processes)
+328   clone(child_stack=NULL, flags=CLONE_CHILD_CLEARTID|CLONE_CHILD_SETTID|SIGCHLD, child_tidptr=0x1bc49690) = 359
+328   wait4(-1,  <unfinished ...>
+359   set_robust_list(0x1bc496a0, 24)   = 0
+359   close(10)                         = 0
+359   rt_sigaction(SIGQUIT, {sa_handler=SIG_DFL, sa_mask=~[RTMIN RT_1], sa_flags=SA_RESTORER, sa_restorer=0x4204d0}, NULL, 8) = 0
+359   execve("./unlink", ["./unlink"], 0x1bc4b880 /* 11 vars */) = 0
+359   brk(NULL)                         = 0x651b816a4000
+359   mmap(NULL, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x72380c103000
+359   access("/etc/ld.so.preload", R_OK) = -1 ENOENT (No such file or directory)
+359   arch_prctl(ARCH_SET_FS, 0x72380c103f00) = 0
+359   set_tid_address(0x72380c1041d0)   = 359
+359   set_robust_list(0x72380c1041e0, 24) = 0
+359   rseq(0x72380c104820, 0x20, 0, 0x53053053) = 0
+359   openat(AT_FDCWD, "./test_unlink", O_WRONLY|O_CREAT, 002) = 3
+359   close(3)                          = 0
+359   unlinkat(AT_FDCWD, "./test_unlink", 0) = 0
+359   openat(AT_FDCWD, "./test_unlink", O_RDONLY) = -1 ENOENT (No such file or directory)
+359   exit(0)                           = ?
+359   +++ exited with 0 +++
+328   <... wait4 resumed>[{WIFEXITED(s) && WEXITSTATUS(s) == 0}], 0, NULL) = 359
+328   --- SIGCHLD {si_signo=SIGCHLD, si_code=CLD_EXITED, si_pid=359, si_uid=0, si_status=0, si_utime=0, si_stime=0} ---
+328   rt_sigreturn({mask=[]})           = 359
+328   wait4(-1, 0x7ffde2c5939c, WNOHANG, NULL) = -1 ECHILD (No child processes)
+328   clone(child_stack=NULL, flags=CLONE_CHILD_CLEARTID|CLONE_CHILD_SETTID|SIGCHLD, child_tidptr=0x1bc49690) = 360
+328   wait4(-1,  <unfinished ...>
+360   set_robust_list(0x1bc496a0, 24)   = 0
+360   close(10)                         = 0
+360   rt_sigaction(SIGQUIT, {sa_handler=SIG_DFL, sa_mask=~[RTMIN RT_1], sa_flags=SA_RESTORER, sa_restorer=0x4204d0}, NULL, 8) = 0
+360   execve("./wait", ["./wait"], 0x1bc4b870 /* 11 vars */) = 0
+360   brk(NULL)                         = 0x63dfe05bb000
+360   mmap(NULL, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x79f3a60b4000
+360   access("/etc/ld.so.preload", R_OK) = -1 ENOENT (No such file or directory)
+360   arch_prctl(ARCH_SET_FS, 0x79f3a60b4f00) = 0
+360   set_tid_address(0x79f3a60b51d0)   = 360
+360   set_robust_list(0x79f3a60b51e0, 24) = 0
+360   rseq(0x79f3a60b5820, 0x20, 0, 0x53053053) = 0
+360   clone(child_stack=NULL, flags=SIGCHLD) = 361
+360   wait4(-1,  <unfinished ...>
+361   exit(0)                           = ?
+361   +++ exited with 0 +++
+360   <... wait4 resumed>[{WIFEXITED(s) && WEXITSTATUS(s) == 0}], 0, NULL) = 361
+360   --- SIGCHLD {si_signo=SIGCHLD, si_code=CLD_EXITED, si_pid=361, si_uid=0, si_status=0, si_utime=0, si_stime=0} ---
+360   exit(0)                           = ?
+360   +++ exited with 0 +++
+328   <... wait4 resumed>[{WIFEXITED(s) && WEXITSTATUS(s) == 0}], 0, NULL) = 360
+328   --- SIGCHLD {si_signo=SIGCHLD, si_code=CLD_EXITED, si_pid=360, si_uid=0, si_status=0, si_utime=0, si_stime=0} ---
+328   rt_sigreturn({mask=[]})           = 360
+328   wait4(-1, 0x7ffde2c5939c, WNOHANG, NULL) = -1 ECHILD (No child processes)
+328   clone(child_stack=NULL, flags=CLONE_CHILD_CLEARTID|CLONE_CHILD_SETTID|SIGCHLD, child_tidptr=0x1bc49690) = 362
+328   wait4(-1,  <unfinished ...>
+362   set_robust_list(0x1bc496a0, 24)   = 0
+362   close(10)                         = 0
+362   rt_sigaction(SIGQUIT, {sa_handler=SIG_DFL, sa_mask=~[RTMIN RT_1], sa_flags=SA_RESTORER, sa_restorer=0x4204d0}, NULL, 8) = 0
+362   execve("./waitpid", ["./waitpid"], 0x1bc4b880 /* 11 vars */) = 0
+362   brk(NULL)                         = 0x5d5c9d610000
+362   mmap(NULL, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x76219bb09000
+362   access("/etc/ld.so.preload", R_OK) = -1 ENOENT (No such file or directory)
+362   arch_prctl(ARCH_SET_FS, 0x76219bb09f00) = 0
+362   set_tid_address(0x76219bb0a1d0)   = 362
+362   set_robust_list(0x76219bb0a1e0, 24) = 0
+362   rseq(0x76219bb0a820, 0x20, 0, 0x53053053) = 0
+362   clone(child_stack=NULL, flags=SIGCHLD) = 363
+363   sched_yield( <unfinished ...>
+362   wait4(363,  <unfinished ...>
+363   <... sched_yield resumed>)        = 0
+363   exit(3)                           = ?
+363   +++ exited with 3 +++
+362   <... wait4 resumed>[{WIFEXITED(s) && WEXITSTATUS(s) == 3}], 0, NULL) = 363
+362   --- SIGCHLD {si_signo=SIGCHLD, si_code=CLD_EXITED, si_pid=363, si_uid=0, si_status=3, si_utime=0, si_stime=0} ---
+362   exit(0)                           = ?
+362   +++ exited with 0 +++
+328   <... wait4 resumed>[{WIFEXITED(s) && WEXITSTATUS(s) == 0}], 0, NULL) = 362
+328   --- SIGCHLD {si_signo=SIGCHLD, si_code=CLD_EXITED, si_pid=362, si_uid=0, si_status=0, si_utime=0, si_stime=0} ---
+328   rt_sigreturn({mask=[]})           = 362
+328   wait4(-1, 0x7ffde2c5939c, WNOHANG, NULL) = -1 ECHILD (No child processes)
+328   clone(child_stack=NULL, flags=CLONE_CHILD_CLEARTID|CLONE_CHILD_SETTID|SIGCHLD, child_tidptr=0x1bc49690) = 364
+328   wait4(-1,  <unfinished ...>
+364   set_robust_list(0x1bc496a0, 24)   = 0
+364   close(10)                         = 0
+364   rt_sigaction(SIGQUIT, {sa_handler=SIG_DFL, sa_mask=~[RTMIN RT_1], sa_flags=SA_RESTORER, sa_restorer=0x4204d0}, NULL, 8) = 0
+364   execve("./write", ["./write"], 0x1bc4b870 /* 11 vars */) = 0
+364   brk(NULL)                         = 0x55fc07021000
+364   mmap(NULL, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x727faa1b8000
+364   access("/etc/ld.so.preload", R_OK) = -1 ENOENT (No such file or directory)
+364   arch_prctl(ARCH_SET_FS, 0x727faa1b8f00) = 0
+364   set_tid_address(0x727faa1b91d0)   = 364
+364   set_robust_list(0x727faa1b91e0, 24) = 0
+364   rseq(0x727faa1b9820, 0x20, 0, 0x53053053) = 0
+364   exit(0)                           = ?
+364   +++ exited with 0 +++
+328   <... wait4 resumed>[{WIFEXITED(s) && WEXITSTATUS(s) == 0}], 0, NULL) = 364
+328   --- SIGCHLD {si_signo=SIGCHLD, si_code=CLD_EXITED, si_pid=364, si_uid=0, si_status=0, si_utime=0, si_stime=0} ---
+328   rt_sigreturn({mask=[]})           = 364
+328   wait4(-1, 0x7ffde2c5939c, WNOHANG, NULL) = -1 ECHILD (No child processes)
+328   clone(child_stack=NULL, flags=CLONE_CHILD_CLEARTID|CLONE_CHILD_SETTID|SIGCHLD, child_tidptr=0x1bc49690) = 365
+328   wait4(-1,  <unfinished ...>
+365   set_robust_list(0x1bc496a0, 24)   = 0
+365   close(10)                         = 0
+365   rt_sigaction(SIGQUIT, {sa_handler=SIG_DFL, sa_mask=~[RTMIN RT_1], sa_flags=SA_RESTORER, sa_restorer=0x4204d0}, NULL, 8) = 0
+365   execve("./yield", ["./yield"], 0x1bc4b870 /* 11 vars */) = 0
+365   brk(NULL)                         = 0x5763d3365000
+365   mmap(NULL, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x76f660f2c000
+365   access("/etc/ld.so.preload", R_OK) = -1 ENOENT (No such file or directory)
+365   arch_prctl(ARCH_SET_FS, 0x76f660f2cf00) = 0
+365   set_tid_address(0x76f660f2d1d0)   = 365
+365   set_robust_list(0x76f660f2d1e0, 24) = 0
+365   rseq(0x76f660f2d820, 0x20, 0, 0x53053053) = 0
+365   clone(child_stack=NULL, flags=SIGCHLD) = 366
+366   sched_yield( <unfinished ...>
+365   clone(child_stack=NULL, flags=SIGCHLD <unfinished ...>
+366   <... sched_yield resumed>)        = 0
+366   getpid()                          = 366
+365   <... clone resumed>)              = 367
+365   clone(child_stack=NULL, flags=SIGCHLD <unfinished ...>
+367   sched_yield()                     = 0
+367   getpid()                          = 367
+366   sched_yield()                     = 0
+366   getpid()                          = 366
+365   <... clone resumed>)              = 368
+368   sched_yield( <unfinished ...>
+365   wait4(-1,  <unfinished ...>
+368   <... sched_yield resumed>)        = 0
+368   getpid()                          = 368
+367   sched_yield()                     = 0
+366   sched_yield( <unfinished ...>
+368   sched_yield( <unfinished ...>
+367   getpid( <unfinished ...>
+366   <... sched_yield resumed>)        = 0
+368   <... sched_yield resumed>)        = 0
+367   <... getpid resumed>)             = 367
+368   getpid( <unfinished ...>
+366   getpid( <unfinished ...>
+368   <... getpid resumed>)             = 368
+366   <... getpid resumed>)             = 366
+368   sched_yield()                     = 0
+368   getpid()                          = 368
+367   sched_yield( <unfinished ...>
+366   sched_yield( <unfinished ...>
+367   <... sched_yield resumed>)        = 0
+366   <... sched_yield resumed>)        = 0
+367   getpid( <unfinished ...>
+366   getpid( <unfinished ...>
+367   <... getpid resumed>)             = 367
+366   <... getpid resumed>)             = 366
+368   sched_yield()                     = 0
+368   getpid()                          = 368
+366   sched_yield()                     = 0
+367   sched_yield( <unfinished ...>
+366   getpid( <unfinished ...>
+367   <... sched_yield resumed>)        = 0
+366   <... getpid resumed>)             = 366
+367   getpid()                          = 367
+368   sched_yield()                     = 0
+368   getpid()                          = 368
+368   exit(0 <unfinished ...>
+366   exit(0 <unfinished ...>
+368   <... exit resumed>)               = ?
+366   <... exit resumed>)               = ?
+367   sched_yield( <unfinished ...>
+368   +++ exited with 0 +++
+367   <... sched_yield resumed>)        = 0
+366   +++ exited with 0 +++
+365   <... wait4 resumed>NULL, 0, NULL) = 366
+367   getpid()                          = 367
+365   --- SIGCHLD {si_signo=SIGCHLD, si_code=CLD_EXITED, si_pid=368, si_uid=0, si_status=0, si_utime=0, si_stime=0} ---
+365   wait4(-1, NULL, 0, NULL)          = 368
+365   wait4(-1,  <unfinished ...>
+367   exit(0)                           = ?
+367   +++ exited with 0 +++
+365   <... wait4 resumed>NULL, 0, NULL) = 367
+365   --- SIGCHLD {si_signo=SIGCHLD, si_code=CLD_EXITED, si_pid=367, si_uid=0, si_status=0, si_utime=0, si_stime=0} ---
+365   exit(0)                           = ?
+365   +++ exited with 0 +++
+328   <... wait4 resumed>[{WIFEXITED(s) && WEXITSTATUS(s) == 0}], 0, NULL) = 365
+328   --- SIGCHLD {si_signo=SIGCHLD, si_code=CLD_EXITED, si_pid=365, si_uid=0, si_status=0, si_utime=0, si_stime=0} ---
+328   rt_sigreturn({mask=[]})           = 365
+328   wait4(-1, 0x7ffde2c5939c, WNOHANG, NULL) = -1 ECHILD (No child processes)
+328   exit_group(0)                     = ?
+328   +++ exited with 0 +++

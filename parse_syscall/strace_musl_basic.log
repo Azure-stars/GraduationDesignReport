@@ -1,0 +1,1026 @@
+283   execve("./busybox", ["./busybox", "sh", "./run-all.sh"], 0x7fff2003d158 /* 11 vars */) = 0
+283   arch_prctl(ARCH_SET_FS, 0x7e3f6d518278) = 0
+283   set_tid_address(0x7e3f6d518bf8)   = 283
+283   getuid()                          = 0
+283   brk(NULL)                         = 0x55557e5e0000
+283   brk(0x55557e5e2000)               = 0x55557e5e2000
+283   mmap(0x55557e5e0000, 4096, PROT_NONE, MAP_PRIVATE|MAP_FIXED|MAP_ANONYMOUS, -1, 0) = 0x55557e5e0000
+283   mmap(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7e3f6d677000
+283   mmap(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7e3f6d676000
+283   getpid()                          = 283
+283   mmap(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7e3f6d675000
+283   rt_sigprocmask(SIG_UNBLOCK, [RT_1 RT_2], NULL, 8) = 0
+283   rt_sigaction(SIGCHLD, {sa_handler=0x7e3f6d25fcbd, sa_mask=~[RTMIN RT_1 RT_2], sa_flags=SA_RESTORER, sa_restorer=0x7e3f6d2d6a3b}, NULL, 8) = 0
+283   getppid()                         = 280
+283   stat("/code/musl/basic", {st_mode=S_IFDIR|0755, st_size=1024, ...}) = 0
+283   stat(".", {st_mode=S_IFDIR|0755, st_size=1024, ...}) = 0
+283   open("./run-all.sh", O_RDONLY|O_LARGEFILE|O_CLOEXEC) = 3
+283   fcntl(3, F_SETFD, FD_CLOEXEC)     = 0
+283   fcntl(3, F_DUPFD_CLOEXEC, 10)     = 10
+283   fcntl(10, F_SETFD, FD_CLOEXEC)    = 0
+283   close(3)                          = 0
+283   rt_sigaction(SIGINT, NULL, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0
+283   rt_sigaction(SIGINT, {sa_handler=0x7e3f6d25fcbd, sa_mask=~[RTMIN RT_1 RT_2], sa_flags=SA_RESTORER, sa_restorer=0x7e3f6d2d6a3b}, NULL, 8) = 0
+283   rt_sigaction(SIGQUIT, NULL, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0
+283   rt_sigaction(SIGQUIT, {sa_handler=SIG_IGN, sa_mask=~[RTMIN RT_1 RT_2], sa_flags=SA_RESTORER, sa_restorer=0x7e3f6d2d6a3b}, NULL, 8) = 0
+283   rt_sigaction(SIGTERM, NULL, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0
+283   mmap(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7e3f6d674000
+283   rt_sigprocmask(SIG_BLOCK, ~[RTMIN RT_1 RT_2], [], 8) = 0
+283   rt_sigprocmask(SIG_BLOCK, ~[], ~[KILL STOP RTMIN RT_1 RT_2], 8) = 0
+283   fork()                            = 284
+283   rt_sigprocmask(SIG_SETMASK, ~[KILL STOP RTMIN RT_1 RT_2], NULL, 8) = 0
+283   rt_sigprocmask(SIG_SETMASK, [], NULL, 8) = 0
+283   wait4(-1,  <unfinished ...>
+284   gettid()                          = 284
+284   rt_sigprocmask(SIG_SETMASK, ~[KILL STOP RTMIN RT_1 RT_2], NULL, 8) = 0
+284   rt_sigprocmask(SIG_SETMASK, [], NULL, 8) = 0
+284   close(10)                         = 0
+284   rt_sigaction(SIGQUIT, {sa_handler=SIG_DFL, sa_mask=~[RTMIN RT_1 RT_2], sa_flags=SA_RESTORER, sa_restorer=0x7e3f6d2d6a3b}, NULL, 8) = 0
+284   execve("./brk", ["./brk"], 0x7e3f6d677b10 /* 11 vars */) = 0
+284   brk(NULL)                         = 0x58e46977f000
+284   mmap(NULL, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x783e4c1fa000
+284   access("/etc/ld.so.preload", R_OK) = -1 ENOENT (No such file or directory)
+284   arch_prctl(ARCH_SET_FS, 0x783e4c1faf00) = 0
+284   set_tid_address(0x783e4c1fb1d0)   = 284
+284   set_robust_list(0x783e4c1fb1e0, 24) = 0
+284   rseq(0x783e4c1fb820, 0x20, 0, 0x53053053) = 0
+284   brk(NULL)                         = 0x58e46977f000
+284   brk(0x6977f040)                   = 0x58e46977f000
+284   brk(NULL)                         = 0x58e46977f000
+284   brk(0x6977f040)                   = 0x58e46977f000
+284   brk(NULL)                         = 0x58e46977f000
+284   exit(0)                           = ?
+284   +++ exited with 0 +++
+283   <... wait4 resumed>[{WIFEXITED(s) && WEXITSTATUS(s) == 0}], 0, NULL) = 284
+283   --- SIGCHLD {si_signo=SIGCHLD, si_code=CLD_EXITED, si_pid=284, si_uid=0, si_status=0, si_utime=0, si_stime=0} ---
+283   rt_sigreturn({mask=[]})           = 284
+283   wait4(-1, 0x7ffef8c7c1dc, WNOHANG, NULL) = -1 ECHILD (No child processes)
+283   rt_sigprocmask(SIG_BLOCK, ~[RTMIN RT_1 RT_2], [], 8) = 0
+283   rt_sigprocmask(SIG_BLOCK, ~[], ~[KILL STOP RTMIN RT_1 RT_2], 8) = 0
+283   fork()                            = 285
+283   rt_sigprocmask(SIG_SETMASK, ~[KILL STOP RTMIN RT_1 RT_2],  <unfinished ...>
+285   gettid( <unfinished ...>
+283   <... rt_sigprocmask resumed>NULL, 8) = 0
+285   <... gettid resumed>)             = 285
+283   rt_sigprocmask(SIG_SETMASK, [], NULL, 8) = 0
+283   wait4(-1,  <unfinished ...>
+285   rt_sigprocmask(SIG_SETMASK, ~[KILL STOP RTMIN RT_1 RT_2], NULL, 8) = 0
+285   rt_sigprocmask(SIG_SETMASK, [], NULL, 8) = 0
+285   close(10)                         = 0
+285   rt_sigaction(SIGQUIT, {sa_handler=SIG_DFL, sa_mask=~[RTMIN RT_1 RT_2], sa_flags=SA_RESTORER, sa_restorer=0x7e3f6d2d6a3b}, NULL, 8) = 0
+285   execve("./chdir", ["./chdir"], 0x7e3f6d677b20 /* 11 vars */) = 0
+285   brk(NULL)                         = 0x60ef16d5f000
+285   mmap(NULL, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7b9b749b1000
+285   access("/etc/ld.so.preload", R_OK) = -1 ENOENT (No such file or directory)
+285   arch_prctl(ARCH_SET_FS, 0x7b9b749b1f00) = 0
+285   set_tid_address(0x7b9b749b21d0)   = 285
+285   set_robust_list(0x7b9b749b21e0, 24) = 0
+285   rseq(0x7b9b749b2820, 0x20, 0, 0x53053053) = 0
+285   mkdirat(AT_FDCWD, "test_chdir", 0666) = -1 EEXIST (File exists)
+285   chdir("test_chdir")               = 0
+285   getcwd("/code/musl/basic/test_chdir", 30) = 28
+285   exit(0)                           = ?
+285   +++ exited with 0 +++
+283   <... wait4 resumed>[{WIFEXITED(s) && WEXITSTATUS(s) == 0}], 0, NULL) = 285
+283   --- SIGCHLD {si_signo=SIGCHLD, si_code=CLD_EXITED, si_pid=285, si_uid=0, si_status=0, si_utime=0, si_stime=0} ---
+283   rt_sigreturn({mask=[]})           = 285
+283   wait4(-1, 0x7ffef8c7c1dc, WNOHANG, NULL) = -1 ECHILD (No child processes)
+283   rt_sigprocmask(SIG_BLOCK, ~[RTMIN RT_1 RT_2], [], 8) = 0
+283   rt_sigprocmask(SIG_BLOCK, ~[], ~[KILL STOP RTMIN RT_1 RT_2], 8) = 0
+283   fork()                            = 286
+283   rt_sigprocmask(SIG_SETMASK, ~[KILL STOP RTMIN RT_1 RT_2], NULL, 8) = 0
+283   rt_sigprocmask(SIG_SETMASK, [], NULL, 8) = 0
+283   wait4(-1,  <unfinished ...>
+286   gettid()                          = 286
+286   rt_sigprocmask(SIG_SETMASK, ~[KILL STOP RTMIN RT_1 RT_2], NULL, 8) = 0
+286   rt_sigprocmask(SIG_SETMASK, [], NULL, 8) = 0
+286   close(10)                         = 0
+286   rt_sigaction(SIGQUIT, {sa_handler=SIG_DFL, sa_mask=~[RTMIN RT_1 RT_2], sa_flags=SA_RESTORER, sa_restorer=0x7e3f6d2d6a3b}, NULL, 8) = 0
+286   execve("./clone", ["./clone"], 0x7e3f6d677b30 /* 11 vars */) = 0
+286   brk(NULL)                         = 0x5f539b62d000
+286   mmap(NULL, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x70d7acffa000
+286   access("/etc/ld.so.preload", R_OK) = -1 ENOENT (No such file or directory)
+286   arch_prctl(ARCH_SET_FS, 0x70d7acffaf00) = 0
+286   set_tid_address(0x70d7acffb1d0)   = 286
+286   set_robust_list(0x70d7acffb1e0, 24) = 0
+286   rseq(0x70d7acffb820, 0x20, 0, 0x53053053) = 0
+286   clone(child_stack=0x5f535f641838, flags=SIGCHLD) = 287
+286   wait4(-1,  <unfinished ...>
+287   exit(0)                           = ?
+287   +++ exited with 0 +++
+286   <... wait4 resumed>[{WIFEXITED(s) && WEXITSTATUS(s) == 0}], 0, NULL) = 287
+286   --- SIGCHLD {si_signo=SIGCHLD, si_code=CLD_EXITED, si_pid=287, si_uid=0, si_status=0, si_utime=0, si_stime=0} ---
+286   exit(0)                           = ?
+286   +++ exited with 0 +++
+283   <... wait4 resumed>[{WIFEXITED(s) && WEXITSTATUS(s) == 0}], 0, NULL) = 286
+283   --- SIGCHLD {si_signo=SIGCHLD, si_code=CLD_EXITED, si_pid=286, si_uid=0, si_status=0, si_utime=0, si_stime=0} ---
+283   rt_sigreturn({mask=[]})           = 286
+283   wait4(-1, 0x7ffef8c7c1dc, WNOHANG, NULL) = -1 ECHILD (No child processes)
+283   rt_sigprocmask(SIG_BLOCK, ~[RTMIN RT_1 RT_2], [], 8) = 0
+283   rt_sigprocmask(SIG_BLOCK, ~[], ~[KILL STOP RTMIN RT_1 RT_2], 8) = 0
+283   fork()                            = 288
+283   rt_sigprocmask(SIG_SETMASK, ~[KILL STOP RTMIN RT_1 RT_2], NULL, 8) = 0
+283   rt_sigprocmask(SIG_SETMASK, [], NULL, 8) = 0
+283   wait4(-1,  <unfinished ...>
+288   gettid()                          = 288
+288   rt_sigprocmask(SIG_SETMASK, ~[KILL STOP RTMIN RT_1 RT_2], NULL, 8) = 0
+288   rt_sigprocmask(SIG_SETMASK, [], NULL, 8) = 0
+288   close(10)                         = 0
+288   rt_sigaction(SIGQUIT, {sa_handler=SIG_DFL, sa_mask=~[RTMIN RT_1 RT_2], sa_flags=SA_RESTORER, sa_restorer=0x7e3f6d2d6a3b}, NULL, 8) = 0
+288   execve("./close", ["./close"], 0x7e3f6d677b40 /* 11 vars */) = 0
+288   brk(NULL)                         = 0x5ccead790000
+288   mmap(NULL, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7a4a240da000
+288   access("/etc/ld.so.preload", R_OK) = -1 ENOENT (No such file or directory)
+288   arch_prctl(ARCH_SET_FS, 0x7a4a240daf00) = 0
+288   set_tid_address(0x7a4a240db1d0)   = 288
+288   set_robust_list(0x7a4a240db1e0, 24) = 0
+288   rseq(0x7a4a240db820, 0x20, 0, 0x53053053) = 0
+288   openat(AT_FDCWD, "test_close.txt", O_RDWR|O_CREAT, 002) = 3
+288   close(3)                          = 0
+288   exit(0)                           = ?
+288   +++ exited with 0 +++
+283   <... wait4 resumed>[{WIFEXITED(s) && WEXITSTATUS(s) == 0}], 0, NULL) = 288
+283   --- SIGCHLD {si_signo=SIGCHLD, si_code=CLD_EXITED, si_pid=288, si_uid=0, si_status=0, si_utime=0, si_stime=0} ---
+283   rt_sigreturn({mask=[]})           = 288
+283   wait4(-1, 0x7ffef8c7c1dc, WNOHANG, NULL) = -1 ECHILD (No child processes)
+283   rt_sigprocmask(SIG_BLOCK, ~[RTMIN RT_1 RT_2], [], 8) = 0
+283   rt_sigprocmask(SIG_BLOCK, ~[], ~[KILL STOP RTMIN RT_1 RT_2], 8) = 0
+283   fork()                            = 289
+283   rt_sigprocmask(SIG_SETMASK, ~[KILL STOP RTMIN RT_1 RT_2], NULL, 8) = 0
+283   rt_sigprocmask(SIG_SETMASK, [], NULL, 8) = 0
+283   wait4(-1,  <unfinished ...>
+289   gettid()                          = 289
+289   rt_sigprocmask(SIG_SETMASK, ~[KILL STOP RTMIN RT_1 RT_2], NULL, 8) = 0
+289   rt_sigprocmask(SIG_SETMASK, [], NULL, 8) = 0
+289   close(10)                         = 0
+289   rt_sigaction(SIGQUIT, {sa_handler=SIG_DFL, sa_mask=~[RTMIN RT_1 RT_2], sa_flags=SA_RESTORER, sa_restorer=0x7e3f6d2d6a3b}, NULL, 8) = 0
+289   execve("./dup2", ["./dup2"], 0x7e3f6d677b50 /* 11 vars */) = 0
+289   brk(NULL)                         = 0x5cdac7381000
+289   mmap(NULL, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7e39ad5f1000
+289   access("/etc/ld.so.preload", R_OK) = -1 ENOENT (No such file or directory)
+289   arch_prctl(ARCH_SET_FS, 0x7e39ad5f1f00) = 0
+289   set_tid_address(0x7e39ad5f21d0)   = 289
+289   set_robust_list(0x7e39ad5f21e0, 24) = 0
+289   rseq(0x7e39ad5f2820, 0x20, 0, 0x53053053) = 0
+289   dup3(1, 100, 0)                   = 100
+289   exit(0)                           = ?
+289   +++ exited with 0 +++
+283   <... wait4 resumed>[{WIFEXITED(s) && WEXITSTATUS(s) == 0}], 0, NULL) = 289
+283   --- SIGCHLD {si_signo=SIGCHLD, si_code=CLD_EXITED, si_pid=289, si_uid=0, si_status=0, si_utime=0, si_stime=0} ---
+283   rt_sigreturn({mask=[]})           = 289
+283   wait4(-1, 0x7ffef8c7c1dc, WNOHANG, NULL) = -1 ECHILD (No child processes)
+283   rt_sigprocmask(SIG_BLOCK, ~[RTMIN RT_1 RT_2], [], 8) = 0
+283   rt_sigprocmask(SIG_BLOCK, ~[], ~[KILL STOP RTMIN RT_1 RT_2], 8) = 0
+283   fork()                            = 290
+283   rt_sigprocmask(SIG_SETMASK, ~[KILL STOP RTMIN RT_1 RT_2], NULL, 8) = 0
+283   rt_sigprocmask(SIG_SETMASK, [], NULL, 8) = 0
+283   wait4(-1,  <unfinished ...>
+290   gettid()                          = 290
+290   rt_sigprocmask(SIG_SETMASK, ~[KILL STOP RTMIN RT_1 RT_2], NULL, 8) = 0
+290   rt_sigprocmask(SIG_SETMASK, [], NULL, 8) = 0
+290   close(10)                         = 0
+290   rt_sigaction(SIGQUIT, {sa_handler=SIG_DFL, sa_mask=~[RTMIN RT_1 RT_2], sa_flags=SA_RESTORER, sa_restorer=0x7e3f6d2d6a3b}, NULL, 8) = 0
+290   execve("./dup", ["./dup"], 0x7e3f6d677b60 /* 11 vars */) = 0
+290   brk(NULL)                         = 0x5f1e8e337000
+290   mmap(NULL, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7704360e4000
+290   access("/etc/ld.so.preload", R_OK) = -1 ENOENT (No such file or directory)
+290   arch_prctl(ARCH_SET_FS, 0x7704360e4f00) = 0
+290   set_tid_address(0x7704360e51d0)   = 290
+290   set_robust_list(0x7704360e51e0, 24) = 0
+290   rseq(0x7704360e5820, 0x20, 0, 0x53053053) = 0
+290   exit(0)                           = ?
+290   +++ exited with 0 +++
+283   <... wait4 resumed>[{WIFEXITED(s) && WEXITSTATUS(s) == 0}], 0, NULL) = 290
+283   --- SIGCHLD {si_signo=SIGCHLD, si_code=CLD_EXITED, si_pid=290, si_uid=0, si_status=0, si_utime=0, si_stime=0} ---
+283   rt_sigreturn({mask=[]})           = 290
+283   wait4(-1, 0x7ffef8c7c1dc, WNOHANG, NULL) = -1 ECHILD (No child processes)
+283   rt_sigprocmask(SIG_BLOCK, ~[RTMIN RT_1 RT_2], [], 8) = 0
+283   rt_sigprocmask(SIG_BLOCK, ~[], ~[KILL STOP RTMIN RT_1 RT_2], 8) = 0
+283   fork()                            = 291
+283   rt_sigprocmask(SIG_SETMASK, ~[KILL STOP RTMIN RT_1 RT_2], NULL, 8) = 0
+283   rt_sigprocmask(SIG_SETMASK, [], NULL, 8) = 0
+283   wait4(-1,  <unfinished ...>
+291   gettid()                          = 291
+291   rt_sigprocmask(SIG_SETMASK, ~[KILL STOP RTMIN RT_1 RT_2], NULL, 8) = 0
+291   rt_sigprocmask(SIG_SETMASK, [], NULL, 8) = 0
+291   close(10)                         = 0
+291   rt_sigaction(SIGQUIT, {sa_handler=SIG_DFL, sa_mask=~[RTMIN RT_1 RT_2], sa_flags=SA_RESTORER, sa_restorer=0x7e3f6d2d6a3b}, NULL, 8) = 0
+291   execve("./execve", ["./execve"], 0x7e3f6d677ae0 /* 11 vars */) = 0
+291   brk(NULL)                         = 0x61f685124000
+291   mmap(NULL, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x79b188e93000
+291   access("/etc/ld.so.preload", R_OK) = -1 ENOENT (No such file or directory)
+291   arch_prctl(ARCH_SET_FS, 0x79b188e93f00) = 0
+291   set_tid_address(0x79b188e941d0)   = 291
+291   set_robust_list(0x79b188e941e0, 24) = 0
+291   rseq(0x79b188e94820, 0x20, 0, 0x53053053) = 0
+291   execve("test_echo", ["test_echo"], 0x7fffc0c1ac58 /* 0 vars */) = 0
+291   brk(NULL)                         = 0x623b4b3f9000
+291   mmap(NULL, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7d37edeae000
+291   access("/etc/ld.so.preload", R_OK) = -1 ENOENT (No such file or directory)
+291   arch_prctl(ARCH_SET_FS, 0x7d37edeaef00) = 0
+291   set_tid_address(0x7d37edeaf1d0)   = 291
+291   set_robust_list(0x7d37edeaf1e0, 24) = 0
+291   rseq(0x7d37edeaf820, 0x20, 0, 0x53053053) = 0
+291   exit(0)                           = ?
+291   +++ exited with 0 +++
+283   <... wait4 resumed>[{WIFEXITED(s) && WEXITSTATUS(s) == 0}], 0, NULL) = 291
+283   --- SIGCHLD {si_signo=SIGCHLD, si_code=CLD_EXITED, si_pid=291, si_uid=0, si_status=0, si_utime=0, si_stime=0} ---
+283   rt_sigreturn({mask=[]})           = 291
+283   wait4(-1, 0x7ffef8c7c1dc, WNOHANG, NULL) = -1 ECHILD (No child processes)
+283   rt_sigprocmask(SIG_BLOCK, ~[RTMIN RT_1 RT_2], [], 8) = 0
+283   rt_sigprocmask(SIG_BLOCK, ~[], ~[KILL STOP RTMIN RT_1 RT_2], 8) = 0
+283   fork()                            = 292
+283   rt_sigprocmask(SIG_SETMASK, ~[KILL STOP RTMIN RT_1 RT_2],  <unfinished ...>
+292   gettid( <unfinished ...>
+283   <... rt_sigprocmask resumed>NULL, 8) = 0
+292   <... gettid resumed>)             = 292
+283   rt_sigprocmask(SIG_SETMASK, [], NULL, 8) = 0
+283   wait4(-1,  <unfinished ...>
+292   rt_sigprocmask(SIG_SETMASK, ~[KILL STOP RTMIN RT_1 RT_2], NULL, 8) = 0
+292   rt_sigprocmask(SIG_SETMASK, [], NULL, 8) = 0
+292   close(10)                         = 0
+292   rt_sigaction(SIGQUIT, {sa_handler=SIG_DFL, sa_mask=~[RTMIN RT_1 RT_2], sa_flags=SA_RESTORER, sa_restorer=0x7e3f6d2d6a3b}, NULL, 8) = 0
+292   execve("./exit", ["./exit"], 0x7e3f6d677ae0 /* 11 vars */) = 0
+292   brk(NULL)                         = 0x5587903dc000
+292   mmap(NULL, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x75faed04f000
+292   access("/etc/ld.so.preload", R_OK) = -1 ENOENT (No such file or directory)
+292   arch_prctl(ARCH_SET_FS, 0x75faed04ff00) = 0
+292   set_tid_address(0x75faed0501d0)   = 292
+292   set_robust_list(0x75faed0501e0, 24) = 0
+292   rseq(0x75faed050820, 0x20, 0, 0x53053053) = 0
+292   clone(child_stack=NULL, flags=SIGCHLD) = 293
+293   exit(0 <unfinished ...>
+292   wait4(-1,  <unfinished ...>
+293   <... exit resumed>)               = ?
+293   +++ exited with 0 +++
+292   <... wait4 resumed>[{WIFEXITED(s) && WEXITSTATUS(s) == 0}], 0, NULL) = 293
+292   --- SIGCHLD {si_signo=SIGCHLD, si_code=CLD_EXITED, si_pid=293, si_uid=0, si_status=0, si_utime=0, si_stime=0} ---
+292   exit(0)                           = ?
+292   +++ exited with 0 +++
+283   <... wait4 resumed>[{WIFEXITED(s) && WEXITSTATUS(s) == 0}], 0, NULL) = 292
+283   --- SIGCHLD {si_signo=SIGCHLD, si_code=CLD_EXITED, si_pid=292, si_uid=0, si_status=0, si_utime=0, si_stime=0} ---
+283   rt_sigreturn({mask=[]})           = 292
+283   wait4(-1, 0x7ffef8c7c1dc, WNOHANG, NULL) = -1 ECHILD (No child processes)
+283   rt_sigprocmask(SIG_BLOCK, ~[RTMIN RT_1 RT_2], [], 8) = 0
+283   rt_sigprocmask(SIG_BLOCK, ~[], ~[KILL STOP RTMIN RT_1 RT_2], 8) = 0
+283   fork()                            = 294
+283   rt_sigprocmask(SIG_SETMASK, ~[KILL STOP RTMIN RT_1 RT_2], NULL, 8) = 0
+283   rt_sigprocmask(SIG_SETMASK, [], NULL, 8) = 0
+283   wait4(-1,  <unfinished ...>
+294   gettid()                          = 294
+294   rt_sigprocmask(SIG_SETMASK, ~[KILL STOP RTMIN RT_1 RT_2], NULL, 8) = 0
+294   rt_sigprocmask(SIG_SETMASK, [], NULL, 8) = 0
+294   close(10)                         = 0
+294   rt_sigaction(SIGQUIT, {sa_handler=SIG_DFL, sa_mask=~[RTMIN RT_1 RT_2], sa_flags=SA_RESTORER, sa_restorer=0x7e3f6d2d6a3b}, NULL, 8) = 0
+294   execve("./fork", ["./fork"], 0x7e3f6d677af0 /* 11 vars */) = 0
+294   brk(NULL)                         = 0x598e44147000
+294   mmap(NULL, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7c917c330000
+294   access("/etc/ld.so.preload", R_OK) = -1 ENOENT (No such file or directory)
+294   arch_prctl(ARCH_SET_FS, 0x7c917c330f00) = 0
+294   set_tid_address(0x7c917c3311d0)   = 294
+294   set_robust_list(0x7c917c3311e0, 24) = 0
+294   rseq(0x7c917c331820, 0x20, 0, 0x53053053) = 0
+294   clone(child_stack=NULL, flags=SIGCHLD) = 295
+294   wait4(-1,  <unfinished ...>
+295   exit(0)                           = ?
+295   +++ exited with 0 +++
+294   <... wait4 resumed>[{WIFEXITED(s) && WEXITSTATUS(s) == 0}], 0, NULL) = 295
+294   --- SIGCHLD {si_signo=SIGCHLD, si_code=CLD_EXITED, si_pid=295, si_uid=0, si_status=0, si_utime=0, si_stime=0} ---
+294   exit(0)                           = ?
+294   +++ exited with 0 +++
+283   <... wait4 resumed>[{WIFEXITED(s) && WEXITSTATUS(s) == 0}], 0, NULL) = 294
+283   --- SIGCHLD {si_signo=SIGCHLD, si_code=CLD_EXITED, si_pid=294, si_uid=0, si_status=0, si_utime=0, si_stime=0} ---
+283   rt_sigreturn({mask=[]})           = 294
+283   wait4(-1, 0x7ffef8c7c1dc, WNOHANG, NULL) = -1 ECHILD (No child processes)
+283   rt_sigprocmask(SIG_BLOCK, ~[RTMIN RT_1 RT_2], [], 8) = 0
+283   rt_sigprocmask(SIG_BLOCK, ~[], ~[KILL STOP RTMIN RT_1 RT_2], 8) = 0
+283   fork()                            = 296
+296   gettid( <unfinished ...>
+283   rt_sigprocmask(SIG_SETMASK, ~[KILL STOP RTMIN RT_1 RT_2],  <unfinished ...>
+296   <... gettid resumed>)             = 296
+283   <... rt_sigprocmask resumed>NULL, 8) = 0
+283   rt_sigprocmask(SIG_SETMASK, [],  <unfinished ...>
+296   rt_sigprocmask(SIG_SETMASK, ~[KILL STOP RTMIN RT_1 RT_2],  <unfinished ...>
+283   <... rt_sigprocmask resumed>NULL, 8) = 0
+296   <... rt_sigprocmask resumed>NULL, 8) = 0
+283   wait4(-1,  <unfinished ...>
+296   rt_sigprocmask(SIG_SETMASK, [], NULL, 8) = 0
+296   close(10)                         = 0
+296   rt_sigaction(SIGQUIT, {sa_handler=SIG_DFL, sa_mask=~[RTMIN RT_1 RT_2], sa_flags=SA_RESTORER, sa_restorer=0x7e3f6d2d6a3b}, NULL, 8) = 0
+296   execve("./fstat", ["./fstat"], 0x7e3f6d677b00 /* 11 vars */) = 0
+296   brk(NULL)                         = 0x5b470bbb4000
+296   mmap(NULL, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x703a45fbc000
+296   access("/etc/ld.so.preload", R_OK) = -1 ENOENT (No such file or directory)
+296   arch_prctl(ARCH_SET_FS, 0x703a45fbcf00) = 0
+296   set_tid_address(0x703a45fbd1d0)   = 296
+296   set_robust_list(0x703a45fbd1e0, 24) = 0
+296   rseq(0x703a45fbd820, 0x20, 0, 0x53053053) = 0
+296   openat(AT_FDCWD, "./text.txt", O_RDONLY) = 3
+296   fstat(3, {st_mode=S_IFREG|0644, st_size=52, ...}) = 0
+296   exit(0)                           = ?
+296   +++ exited with 0 +++
+283   <... wait4 resumed>[{WIFEXITED(s) && WEXITSTATUS(s) == 0}], 0, NULL) = 296
+283   --- SIGCHLD {si_signo=SIGCHLD, si_code=CLD_EXITED, si_pid=296, si_uid=0, si_status=0, si_utime=0, si_stime=0} ---
+283   rt_sigreturn({mask=[]})           = 296
+283   wait4(-1, 0x7ffef8c7c1dc, WNOHANG, NULL) = -1 ECHILD (No child processes)
+283   rt_sigprocmask(SIG_BLOCK, ~[RTMIN RT_1 RT_2], [], 8) = 0
+283   rt_sigprocmask(SIG_BLOCK, ~[], ~[KILL STOP RTMIN RT_1 RT_2], 8) = 0
+283   fork()                            = 297
+283   rt_sigprocmask(SIG_SETMASK, ~[KILL STOP RTMIN RT_1 RT_2], NULL, 8) = 0
+283   rt_sigprocmask(SIG_SETMASK, [], NULL, 8) = 0
+283   wait4(-1,  <unfinished ...>
+297   gettid()                          = 297
+297   rt_sigprocmask(SIG_SETMASK, ~[KILL STOP RTMIN RT_1 RT_2], NULL, 8) = 0
+297   rt_sigprocmask(SIG_SETMASK, [], NULL, 8) = 0
+297   close(10)                         = 0
+297   rt_sigaction(SIGQUIT, {sa_handler=SIG_DFL, sa_mask=~[RTMIN RT_1 RT_2], sa_flags=SA_RESTORER, sa_restorer=0x7e3f6d2d6a3b}, NULL, 8) = 0
+297   execve("./getcwd", ["./getcwd"], 0x7e3f6d677b20 /* 11 vars */) = 0
+297   brk(NULL)                         = 0x5c185f9bf000
+297   mmap(NULL, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7e6858333000
+297   access("/etc/ld.so.preload", R_OK) = -1 ENOENT (No such file or directory)
+297   arch_prctl(ARCH_SET_FS, 0x7e6858333f00) = 0
+297   set_tid_address(0x7e68583341d0)   = 297
+297   set_robust_list(0x7e68583341e0, 24) = 0
+297   rseq(0x7e6858334820, 0x20, 0, 0x53053053) = 0
+297   getcwd("/code/musl/basic", 128)   = 17
+297   exit(0)                           = ?
+297   +++ exited with 0 +++
+283   <... wait4 resumed>[{WIFEXITED(s) && WEXITSTATUS(s) == 0}], 0, NULL) = 297
+283   --- SIGCHLD {si_signo=SIGCHLD, si_code=CLD_EXITED, si_pid=297, si_uid=0, si_status=0, si_utime=0, si_stime=0} ---
+283   rt_sigreturn({mask=[]})           = 297
+283   wait4(-1, 0x7ffef8c7c1dc, WNOHANG, NULL) = -1 ECHILD (No child processes)
+283   rt_sigprocmask(SIG_BLOCK, ~[RTMIN RT_1 RT_2], [], 8) = 0
+283   rt_sigprocmask(SIG_BLOCK, ~[], ~[KILL STOP RTMIN RT_1 RT_2], 8) = 0
+283   fork()                            = 298
+283   rt_sigprocmask(SIG_SETMASK, ~[KILL STOP RTMIN RT_1 RT_2],  <unfinished ...>
+298   gettid( <unfinished ...>
+283   <... rt_sigprocmask resumed>NULL, 8) = 0
+298   <... gettid resumed>)             = 298
+283   rt_sigprocmask(SIG_SETMASK, [],  <unfinished ...>
+298   rt_sigprocmask(SIG_SETMASK, ~[KILL STOP RTMIN RT_1 RT_2],  <unfinished ...>
+283   <... rt_sigprocmask resumed>NULL, 8) = 0
+298   <... rt_sigprocmask resumed>NULL, 8) = 0
+283   wait4(-1,  <unfinished ...>
+298   rt_sigprocmask(SIG_SETMASK, [], NULL, 8) = 0
+298   close(10)                         = 0
+298   rt_sigaction(SIGQUIT, {sa_handler=SIG_DFL, sa_mask=~[RTMIN RT_1 RT_2], sa_flags=SA_RESTORER, sa_restorer=0x7e3f6d2d6a3b}, NULL, 8) = 0
+298   execve("./getdents", ["./getdents"], 0x7e3f6d677b30 /* 11 vars */) = 0
+298   brk(NULL)                         = 0x6095c8102000
+298   mmap(NULL, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x72f730017000
+298   access("/etc/ld.so.preload", R_OK) = -1 ENOENT (No such file or directory)
+298   arch_prctl(ARCH_SET_FS, 0x72f730017f00) = 0
+298   set_tid_address(0x72f7300181d0)   = 298
+298   set_robust_list(0x72f7300181e0, 24) = 0
+298   rseq(0x72f730018820, 0x20, 0, 0x53053053) = 0
+298   openat(AT_FDCWD, ".", O_RDONLY)   = 3
+298   getdents64(3, 0x60959763c400 /* 18 entries */, 512) = 512
+298   close(3)                          = 0
+298   exit(0)                           = ?
+298   +++ exited with 0 +++
+283   <... wait4 resumed>[{WIFEXITED(s) && WEXITSTATUS(s) == 0}], 0, NULL) = 298
+283   --- SIGCHLD {si_signo=SIGCHLD, si_code=CLD_EXITED, si_pid=298, si_uid=0, si_status=0, si_utime=0, si_stime=0} ---
+283   rt_sigreturn({mask=[]})           = 298
+283   wait4(-1, 0x7ffef8c7c1dc, WNOHANG, NULL) = -1 ECHILD (No child processes)
+283   rt_sigprocmask(SIG_BLOCK, ~[RTMIN RT_1 RT_2], [], 8) = 0
+283   rt_sigprocmask(SIG_BLOCK, ~[], ~[KILL STOP RTMIN RT_1 RT_2], 8) = 0
+283   fork()                            = 299
+283   rt_sigprocmask(SIG_SETMASK, ~[KILL STOP RTMIN RT_1 RT_2],  <unfinished ...>
+299   gettid( <unfinished ...>
+283   <... rt_sigprocmask resumed>NULL, 8) = 0
+283   rt_sigprocmask(SIG_SETMASK, [],  <unfinished ...>
+299   <... gettid resumed>)             = 299
+283   <... rt_sigprocmask resumed>NULL, 8) = 0
+283   wait4(-1,  <unfinished ...>
+299   rt_sigprocmask(SIG_SETMASK, ~[KILL STOP RTMIN RT_1 RT_2], NULL, 8) = 0
+299   rt_sigprocmask(SIG_SETMASK, [], NULL, 8) = 0
+299   close(10)                         = 0
+299   rt_sigaction(SIGQUIT, {sa_handler=SIG_DFL, sa_mask=~[RTMIN RT_1 RT_2], sa_flags=SA_RESTORER, sa_restorer=0x7e3f6d2d6a3b}, NULL, 8) = 0
+299   execve("./getpid", ["./getpid"], 0x7e3f6d677b40 /* 11 vars */) = 0
+299   brk(NULL)                         = 0x64fbd7c73000
+299   mmap(NULL, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x755ef0f02000
+299   access("/etc/ld.so.preload", R_OK) = -1 ENOENT (No such file or directory)
+299   arch_prctl(ARCH_SET_FS, 0x755ef0f02f00) = 0
+299   set_tid_address(0x755ef0f031d0)   = 299
+299   set_robust_list(0x755ef0f031e0, 24) = 0
+299   rseq(0x755ef0f03820, 0x20, 0, 0x53053053) = 0
+299   getpid()                          = 299
+299   exit(0)                           = ?
+299   +++ exited with 0 +++
+283   <... wait4 resumed>[{WIFEXITED(s) && WEXITSTATUS(s) == 0}], 0, NULL) = 299
+283   --- SIGCHLD {si_signo=SIGCHLD, si_code=CLD_EXITED, si_pid=299, si_uid=0, si_status=0, si_utime=0, si_stime=0} ---
+283   rt_sigreturn({mask=[]})           = 299
+283   wait4(-1, 0x7ffef8c7c1dc, WNOHANG, NULL) = -1 ECHILD (No child processes)
+283   rt_sigprocmask(SIG_BLOCK, ~[RTMIN RT_1 RT_2], [], 8) = 0
+283   rt_sigprocmask(SIG_BLOCK, ~[], ~[KILL STOP RTMIN RT_1 RT_2], 8) = 0
+283   fork()                            = 300
+283   rt_sigprocmask(SIG_SETMASK, ~[KILL STOP RTMIN RT_1 RT_2],  <unfinished ...>
+300   gettid( <unfinished ...>
+283   <... rt_sigprocmask resumed>NULL, 8) = 0
+300   <... gettid resumed>)             = 300
+283   rt_sigprocmask(SIG_SETMASK, [], NULL, 8) = 0
+300   rt_sigprocmask(SIG_SETMASK, ~[KILL STOP RTMIN RT_1 RT_2],  <unfinished ...>
+283   wait4(-1,  <unfinished ...>
+300   <... rt_sigprocmask resumed>NULL, 8) = 0
+300   rt_sigprocmask(SIG_SETMASK, [], NULL, 8) = 0
+300   close(10)                         = 0
+300   rt_sigaction(SIGQUIT, {sa_handler=SIG_DFL, sa_mask=~[RTMIN RT_1 RT_2], sa_flags=SA_RESTORER, sa_restorer=0x7e3f6d2d6a3b}, NULL, 8) = 0
+300   execve("./getppid", ["./getppid"], 0x7e3f6d677b50 /* 11 vars */) = 0
+300   brk(NULL)                         = 0x5ca36192f000
+300   mmap(NULL, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7bb2a377a000
+300   access("/etc/ld.so.preload", R_OK) = -1 ENOENT (No such file or directory)
+300   arch_prctl(ARCH_SET_FS, 0x7bb2a377af00) = 0
+300   set_tid_address(0x7bb2a377b1d0)   = 300
+300   set_robust_list(0x7bb2a377b1e0, 24) = 0
+300   rseq(0x7bb2a377b820, 0x20, 0, 0x53053053) = 0
+300   getppid()                         = 283
+300   exit(0)                           = ?
+300   +++ exited with 0 +++
+283   <... wait4 resumed>[{WIFEXITED(s) && WEXITSTATUS(s) == 0}], 0, NULL) = 300
+283   --- SIGCHLD {si_signo=SIGCHLD, si_code=CLD_EXITED, si_pid=300, si_uid=0, si_status=0, si_utime=0, si_stime=0} ---
+283   rt_sigreturn({mask=[]})           = 300
+283   wait4(-1, 0x7ffef8c7c1dc, WNOHANG, NULL) = -1 ECHILD (No child processes)
+283   rt_sigprocmask(SIG_BLOCK, ~[RTMIN RT_1 RT_2], [], 8) = 0
+283   rt_sigprocmask(SIG_BLOCK, ~[], ~[KILL STOP RTMIN RT_1 RT_2], 8) = 0
+283   fork()                            = 301
+283   rt_sigprocmask(SIG_SETMASK, ~[KILL STOP RTMIN RT_1 RT_2],  <unfinished ...>
+301   gettid( <unfinished ...>
+283   <... rt_sigprocmask resumed>NULL, 8) = 0
+283   rt_sigprocmask(SIG_SETMASK, [],  <unfinished ...>
+301   <... gettid resumed>)             = 301
+283   <... rt_sigprocmask resumed>NULL, 8) = 0
+283   wait4(-1,  <unfinished ...>
+301   rt_sigprocmask(SIG_SETMASK, ~[KILL STOP RTMIN RT_1 RT_2], NULL, 8) = 0
+301   rt_sigprocmask(SIG_SETMASK, [], NULL, 8) = 0
+301   close(10)                         = 0
+301   rt_sigaction(SIGQUIT, {sa_handler=SIG_DFL, sa_mask=~[RTMIN RT_1 RT_2], sa_flags=SA_RESTORER, sa_restorer=0x7e3f6d2d6a3b}, NULL, 8) = 0
+301   execve("./gettimeofday", ["./gettimeofday"], 0x7e3f6d677b70 /* 11 vars */) = 0
+301   brk(NULL)                         = 0x647100617000
+301   mmap(NULL, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7a22ecf79000
+301   access("/etc/ld.so.preload", R_OK) = -1 ENOENT (No such file or directory)
+301   arch_prctl(ARCH_SET_FS, 0x7a22ecf79f00) = 0
+301   set_tid_address(0x7a22ecf7a1d0)   = 301
+301   set_robust_list(0x7a22ecf7a1e0, 24) = 0
+301   rseq(0x7a22ecf7a820, 0x20, 0, 0x53053053) = 0
+301   gettimeofday({tv_sec=1741246220, tv_usec=529248}, NULL) = 0
+301   gettimeofday({tv_sec=1741246220, tv_usec=550682}, NULL) = 0
+301   exit(0)                           = ?
+301   +++ exited with 0 +++
+283   <... wait4 resumed>[{WIFEXITED(s) && WEXITSTATUS(s) == 0}], 0, NULL) = 301
+283   --- SIGCHLD {si_signo=SIGCHLD, si_code=CLD_EXITED, si_pid=301, si_uid=0, si_status=0, si_utime=2 /* 0.02 s */, si_stime=0} ---
+283   rt_sigreturn({mask=[]})           = 301
+283   wait4(-1, 0x7ffef8c7c1dc, WNOHANG, NULL) = -1 ECHILD (No child processes)
+283   rt_sigprocmask(SIG_BLOCK, ~[RTMIN RT_1 RT_2], [], 8) = 0
+283   rt_sigprocmask(SIG_BLOCK, ~[], ~[KILL STOP RTMIN RT_1 RT_2], 8) = 0
+283   fork()                            = 302
+283   rt_sigprocmask(SIG_SETMASK, ~[KILL STOP RTMIN RT_1 RT_2],  <unfinished ...>
+302   gettid( <unfinished ...>
+283   <... rt_sigprocmask resumed>NULL, 8) = 0
+302   <... gettid resumed>)             = 302
+283   rt_sigprocmask(SIG_SETMASK, [],  <unfinished ...>
+302   rt_sigprocmask(SIG_SETMASK, ~[KILL STOP RTMIN RT_1 RT_2],  <unfinished ...>
+283   <... rt_sigprocmask resumed>NULL, 8) = 0
+302   <... rt_sigprocmask resumed>NULL, 8) = 0
+283   wait4(-1,  <unfinished ...>
+302   rt_sigprocmask(SIG_SETMASK, [], NULL, 8) = 0
+302   close(10)                         = 0
+302   rt_sigaction(SIGQUIT, {sa_handler=SIG_DFL, sa_mask=~[RTMIN RT_1 RT_2], sa_flags=SA_RESTORER, sa_restorer=0x7e3f6d2d6a3b}, NULL, 8) = 0
+302   execve("./mkdir_", ["./mkdir_"], 0x7e3f6d677b70 /* 11 vars */) = 0
+302   brk(NULL)                         = 0x6293f1b85000
+302   mmap(NULL, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7c5942134000
+302   access("/etc/ld.so.preload", R_OK) = -1 ENOENT (No such file or directory)
+302   arch_prctl(ARCH_SET_FS, 0x7c5942134f00) = 0
+302   set_tid_address(0x7c59421351d0)   = 302
+302   set_robust_list(0x7c59421351e0, 24) = 0
+302   rseq(0x7c5942135820, 0x20, 0, 0x53053053) = 0
+302   mkdirat(AT_FDCWD, "test_mkdir", 0666) = -1 EEXIST (File exists)
+302   openat(AT_FDCWD, "test_mkdir", O_RDONLY|O_DIRECTORY) = 3
+302   close(3)                          = 0
+302   exit(0)                           = ?
+302   +++ exited with 0 +++
+283   <... wait4 resumed>[{WIFEXITED(s) && WEXITSTATUS(s) == 0}], 0, NULL) = 302
+283   --- SIGCHLD {si_signo=SIGCHLD, si_code=CLD_EXITED, si_pid=302, si_uid=0, si_status=0, si_utime=0, si_stime=0} ---
+283   rt_sigreturn({mask=[]})           = 302
+283   wait4(-1, 0x7ffef8c7c1dc, WNOHANG, NULL) = -1 ECHILD (No child processes)
+283   rt_sigprocmask(SIG_BLOCK, ~[RTMIN RT_1 RT_2], [], 8) = 0
+283   rt_sigprocmask(SIG_BLOCK, ~[], ~[KILL STOP RTMIN RT_1 RT_2], 8) = 0
+283   fork()                            = 303
+283   rt_sigprocmask(SIG_SETMASK, ~[KILL STOP RTMIN RT_1 RT_2], NULL, 8) = 0
+283   rt_sigprocmask(SIG_SETMASK, [], NULL, 8) = 0
+283   wait4(-1,  <unfinished ...>
+303   gettid()                          = 303
+303   rt_sigprocmask(SIG_SETMASK, ~[KILL STOP RTMIN RT_1 RT_2], NULL, 8) = 0
+303   rt_sigprocmask(SIG_SETMASK, [], NULL, 8) = 0
+303   close(10)                         = 0
+303   rt_sigaction(SIGQUIT, {sa_handler=SIG_DFL, sa_mask=~[RTMIN RT_1 RT_2], sa_flags=SA_RESTORER, sa_restorer=0x7e3f6d2d6a3b}, NULL, 8) = 0
+303   execve("./mmap", ["./mmap"], 0x7e3f6d677ad0 /* 11 vars */) = 0
+303   brk(NULL)                         = 0x5c30045d5000
+303   mmap(NULL, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x730acebeb000
+303   access("/etc/ld.so.preload", R_OK) = -1 ENOENT (No such file or directory)
+303   arch_prctl(ARCH_SET_FS, 0x730acebebf00) = 0
+303   set_tid_address(0x730acebec1d0)   = 303
+303   set_robust_list(0x730acebec1e0, 24) = 0
+303   rseq(0x730acebec820, 0x20, 0, 0x53053053) = 0
+303   openat(AT_FDCWD, "test_mmap.txt", O_RDWR|O_CREAT, 002) = 3
+303   fstat(3, {st_mode=S_IFREG|000, st_size=27, ...}) = 0
+303   mmap(NULL, 27, PROT_READ|PROT_WRITE, MAP_SHARED, 3, 0) = 0x730acebea000
+303   munmap(0x730acebea000, 27)        = 0
+303   close(3)                          = 0
+303   exit(0)                           = ?
+303   +++ exited with 0 +++
+283   <... wait4 resumed>[{WIFEXITED(s) && WEXITSTATUS(s) == 0}], 0, NULL) = 303
+283   --- SIGCHLD {si_signo=SIGCHLD, si_code=CLD_EXITED, si_pid=303, si_uid=0, si_status=0, si_utime=0, si_stime=0} ---
+283   rt_sigreturn({mask=[]})           = 303
+283   wait4(-1, 0x7ffef8c7c1dc, WNOHANG, NULL) = -1 ECHILD (No child processes)
+283   rt_sigprocmask(SIG_BLOCK, ~[RTMIN RT_1 RT_2], [], 8) = 0
+283   rt_sigprocmask(SIG_BLOCK, ~[], ~[KILL STOP RTMIN RT_1 RT_2], 8) = 0
+283   fork()                            = 304
+283   rt_sigprocmask(SIG_SETMASK, ~[KILL STOP RTMIN RT_1 RT_2],  <unfinished ...>
+304   gettid( <unfinished ...>
+283   <... rt_sigprocmask resumed>NULL, 8) = 0
+283   rt_sigprocmask(SIG_SETMASK, [],  <unfinished ...>
+304   <... gettid resumed>)             = 304
+283   <... rt_sigprocmask resumed>NULL, 8) = 0
+283   wait4(-1,  <unfinished ...>
+304   rt_sigprocmask(SIG_SETMASK, ~[KILL STOP RTMIN RT_1 RT_2], NULL, 8) = 0
+304   rt_sigprocmask(SIG_SETMASK, [], NULL, 8) = 0
+304   close(10)                         = 0
+304   rt_sigaction(SIGQUIT, {sa_handler=SIG_DFL, sa_mask=~[RTMIN RT_1 RT_2], sa_flags=SA_RESTORER, sa_restorer=0x7e3f6d2d6a3b}, NULL, 8) = 0
+304   execve("./mount", ["./mount"], 0x7e3f6d677ae0 /* 11 vars */) = 0
+304   brk(NULL)                         = 0x55929ee5f000
+304   mmap(NULL, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7d764e00c000
+304   access("/etc/ld.so.preload", R_OK) = -1 ENOENT (No such file or directory)
+304   arch_prctl(ARCH_SET_FS, 0x7d764e00cf00) = 0
+304   set_tid_address(0x7d764e00d1d0)   = 304
+304   set_robust_list(0x7d764e00d1e0, 24) = 0
+304   rseq(0x7d764e00d820, 0x20, 0, 0x53053053) = 0
+304   mount("/dev/vda2", "./mnt", "vfat", 0, NULL) = -1 ENOENT (No such file or directory)
+304   exit(-100)                        = ?
+304   +++ exited with 156 +++
+283   <... wait4 resumed>[{WIFEXITED(s) && WEXITSTATUS(s) == 156}], 0, NULL) = 304
+283   --- SIGCHLD {si_signo=SIGCHLD, si_code=CLD_EXITED, si_pid=304, si_uid=0, si_status=156, si_utime=0, si_stime=0} ---
+283   rt_sigreturn({mask=[]})           = 304
+283   wait4(-1, 0x7ffef8c7c1dc, WNOHANG, NULL) = -1 ECHILD (No child processes)
+283   rt_sigprocmask(SIG_BLOCK, ~[RTMIN RT_1 RT_2], [], 8) = 0
+283   rt_sigprocmask(SIG_BLOCK, ~[], ~[KILL STOP RTMIN RT_1 RT_2], 8) = 0
+283   fork()                            = 305
+283   rt_sigprocmask(SIG_SETMASK, ~[KILL STOP RTMIN RT_1 RT_2], NULL, 8) = 0
+283   rt_sigprocmask(SIG_SETMASK, [], NULL, 8) = 0
+283   wait4(-1,  <unfinished ...>
+305   gettid()                          = 305
+305   rt_sigprocmask(SIG_SETMASK, ~[KILL STOP RTMIN RT_1 RT_2], NULL, 8) = 0
+305   rt_sigprocmask(SIG_SETMASK, [], NULL, 8) = 0
+305   close(10)                         = 0
+305   rt_sigaction(SIGQUIT, {sa_handler=SIG_DFL, sa_mask=~[RTMIN RT_1 RT_2], sa_flags=SA_RESTORER, sa_restorer=0x7e3f6d2d6a3b}, NULL, 8) = 0
+305   execve("./munmap", ["./munmap"], 0x7e3f6d677b00 /* 11 vars */) = 0
+305   brk(NULL)                         = 0x613e590d8000
+305   mmap(NULL, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7c3d6609d000
+305   access("/etc/ld.so.preload", R_OK) = -1 ENOENT (No such file or directory)
+305   arch_prctl(ARCH_SET_FS, 0x7c3d6609df00) = 0
+305   set_tid_address(0x7c3d6609e1d0)   = 305
+305   set_robust_list(0x7c3d6609e1e0, 24) = 0
+305   rseq(0x7c3d6609e820, 0x20, 0, 0x53053053) = 0
+305   openat(AT_FDCWD, "test_mmap.txt", O_RDWR|O_CREAT, 002) = 3
+305   fstat(3, {st_mode=S_IFREG|000, st_size=27, ...}) = 0
+305   mmap(NULL, 27, PROT_READ|PROT_WRITE, MAP_SHARED, 3, 0) = 0x7c3d6609c000
+305   munmap(0x7c3d6609c000, 27)        = 0
+305   close(3)                          = 0
+305   exit(0)                           = ?
+305   +++ exited with 0 +++
+283   <... wait4 resumed>[{WIFEXITED(s) && WEXITSTATUS(s) == 0}], 0, NULL) = 305
+283   --- SIGCHLD {si_signo=SIGCHLD, si_code=CLD_EXITED, si_pid=305, si_uid=0, si_status=0, si_utime=0, si_stime=0} ---
+283   rt_sigreturn({mask=[]})           = 305
+283   wait4(-1, 0x7ffef8c7c1dc, WNOHANG, NULL) = -1 ECHILD (No child processes)
+283   rt_sigprocmask(SIG_BLOCK, ~[RTMIN RT_1 RT_2], [], 8) = 0
+283   rt_sigprocmask(SIG_BLOCK, ~[], ~[KILL STOP RTMIN RT_1 RT_2], 8) = 0
+283   fork()                            = 306
+283   rt_sigprocmask(SIG_SETMASK, ~[KILL STOP RTMIN RT_1 RT_2],  <unfinished ...>
+306   gettid( <unfinished ...>
+283   <... rt_sigprocmask resumed>NULL, 8) = 0
+306   <... gettid resumed>)             = 306
+283   rt_sigprocmask(SIG_SETMASK, [],  <unfinished ...>
+306   rt_sigprocmask(SIG_SETMASK, ~[KILL STOP RTMIN RT_1 RT_2],  <unfinished ...>
+283   <... rt_sigprocmask resumed>NULL, 8) = 0
+306   <... rt_sigprocmask resumed>NULL, 8) = 0
+283   wait4(-1,  <unfinished ...>
+306   rt_sigprocmask(SIG_SETMASK, [], NULL, 8) = 0
+306   close(10)                         = 0
+306   rt_sigaction(SIGQUIT, {sa_handler=SIG_DFL, sa_mask=~[RTMIN RT_1 RT_2], sa_flags=SA_RESTORER, sa_restorer=0x7e3f6d2d6a3b}, NULL, 8) = 0
+306   execve("./openat", ["./openat"], 0x7e3f6d677b10 /* 11 vars */) = 0
+306   brk(NULL)                         = 0x566bf7d54000
+306   mmap(NULL, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x78bc09093000
+306   access("/etc/ld.so.preload", R_OK) = -1 ENOENT (No such file or directory)
+306   arch_prctl(ARCH_SET_FS, 0x78bc09093f00) = 0
+306   set_tid_address(0x78bc090941d0)   = 306
+306   set_robust_list(0x78bc090941e0, 24) = 0
+306   rseq(0x78bc09094820, 0x20, 0, 0x53053053) = 0
+306   openat(AT_FDCWD, "./mnt", O_RDONLY|O_DIRECTORY) = 3
+306   openat(3, "test_openat.txt", O_RDWR|O_CREAT, 0600) = 4
+306   close(4)                          = 0
+306   exit(0)                           = ?
+306   +++ exited with 0 +++
+283   <... wait4 resumed>[{WIFEXITED(s) && WEXITSTATUS(s) == 0}], 0, NULL) = 306
+283   --- SIGCHLD {si_signo=SIGCHLD, si_code=CLD_EXITED, si_pid=306, si_uid=0, si_status=0, si_utime=0, si_stime=0} ---
+283   rt_sigreturn({mask=[]})           = 306
+283   wait4(-1, 0x7ffef8c7c1dc, WNOHANG, NULL) = -1 ECHILD (No child processes)
+283   rt_sigprocmask(SIG_BLOCK, ~[RTMIN RT_1 RT_2], [], 8) = 0
+283   rt_sigprocmask(SIG_BLOCK, ~[], ~[KILL STOP RTMIN RT_1 RT_2], 8) = 0
+283   fork()                            = 307
+283   rt_sigprocmask(SIG_SETMASK, ~[KILL STOP RTMIN RT_1 RT_2], NULL, 8) = 0
+283   rt_sigprocmask(SIG_SETMASK, [], NULL, 8) = 0
+283   wait4(-1,  <unfinished ...>
+307   gettid()                          = 307
+307   rt_sigprocmask(SIG_SETMASK, ~[KILL STOP RTMIN RT_1 RT_2], NULL, 8) = 0
+307   rt_sigprocmask(SIG_SETMASK, [], NULL, 8) = 0
+307   close(10)                         = 0
+307   rt_sigaction(SIGQUIT, {sa_handler=SIG_DFL, sa_mask=~[RTMIN RT_1 RT_2], sa_flags=SA_RESTORER, sa_restorer=0x7e3f6d2d6a3b}, NULL, 8) = 0
+307   execve("./open", ["./open"], 0x7e3f6d677b10 /* 11 vars */) = 0
+307   brk(NULL)                         = 0x5c32d3847000
+307   mmap(NULL, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7c68ac531000
+307   access("/etc/ld.so.preload", R_OK) = -1 ENOENT (No such file or directory)
+307   arch_prctl(ARCH_SET_FS, 0x7c68ac531f00) = 0
+307   set_tid_address(0x7c68ac5321d0)   = 307
+307   set_robust_list(0x7c68ac5321e0, 24) = 0
+307   rseq(0x7c68ac532820, 0x20, 0, 0x53053053) = 0
+307   openat(AT_FDCWD, "./text.txt", O_RDONLY) = 3
+307   close(3)                          = 0
+307   exit(0)                           = ?
+307   +++ exited with 0 +++
+283   <... wait4 resumed>[{WIFEXITED(s) && WEXITSTATUS(s) == 0}], 0, NULL) = 307
+283   --- SIGCHLD {si_signo=SIGCHLD, si_code=CLD_EXITED, si_pid=307, si_uid=0, si_status=0, si_utime=0, si_stime=0} ---
+283   rt_sigreturn({mask=[]})           = 307
+283   wait4(-1, 0x7ffef8c7c1dc, WNOHANG, NULL) = -1 ECHILD (No child processes)
+283   rt_sigprocmask(SIG_BLOCK, ~[RTMIN RT_1 RT_2], [], 8) = 0
+283   rt_sigprocmask(SIG_BLOCK, ~[], ~[KILL STOP RTMIN RT_1 RT_2], 8) = 0
+283   fork()                            = 308
+283   rt_sigprocmask(SIG_SETMASK, ~[KILL STOP RTMIN RT_1 RT_2],  <unfinished ...>
+308   gettid( <unfinished ...>
+283   <... rt_sigprocmask resumed>NULL, 8) = 0
+283   rt_sigprocmask(SIG_SETMASK, [],  <unfinished ...>
+308   <... gettid resumed>)             = 308
+283   <... rt_sigprocmask resumed>NULL, 8) = 0
+283   wait4(-1,  <unfinished ...>
+308   rt_sigprocmask(SIG_SETMASK, ~[KILL STOP RTMIN RT_1 RT_2], NULL, 8) = 0
+308   rt_sigprocmask(SIG_SETMASK, [], NULL, 8) = 0
+308   close(10)                         = 0
+308   rt_sigaction(SIGQUIT, {sa_handler=SIG_DFL, sa_mask=~[RTMIN RT_1 RT_2], sa_flags=SA_RESTORER, sa_restorer=0x7e3f6d2d6a3b}, NULL, 8) = 0
+308   execve("./pipe", ["./pipe"], 0x7e3f6d677b20 /* 11 vars */) = 0
+308   brk(NULL)                         = 0x6199653c7000
+308   mmap(NULL, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7fe57beb0000
+308   access("/etc/ld.so.preload", R_OK) = -1 ENOENT (No such file or directory)
+308   arch_prctl(ARCH_SET_FS, 0x7fe57beb0f00) = 0
+308   set_tid_address(0x7fe57beb11d0)   = 308
+308   set_robust_list(0x7fe57beb11e0, 24) = 0
+308   rseq(0x7fe57beb1820, 0x20, 0, 0x53053053) = 0
+308   pipe2([3, 4], 0)                  = 0
+308   clone(child_stack=NULL, flags=SIGCHLD) = 309
+308   close(4)                          = 0
+309   close(3)                          = 0
+309   close(4)                          = 0
+309   exit(0)                           = ?
+309   +++ exited with 0 +++
+308   --- SIGCHLD {si_signo=SIGCHLD, si_code=CLD_EXITED, si_pid=309, si_uid=0, si_status=0, si_utime=0, si_stime=0} ---
+308   close(3)                          = 0
+308   wait4(-1, NULL, 0, NULL)          = 309
+308   exit(0)                           = ?
+308   +++ exited with 0 +++
+283   <... wait4 resumed>[{WIFEXITED(s) && WEXITSTATUS(s) == 0}], 0, NULL) = 308
+283   --- SIGCHLD {si_signo=SIGCHLD, si_code=CLD_EXITED, si_pid=308, si_uid=0, si_status=0, si_utime=0, si_stime=0} ---
+283   rt_sigreturn({mask=[]})           = 308
+283   wait4(-1, 0x7ffef8c7c1dc, WNOHANG, NULL) = -1 ECHILD (No child processes)
+283   rt_sigprocmask(SIG_BLOCK, ~[RTMIN RT_1 RT_2], [], 8) = 0
+283   rt_sigprocmask(SIG_BLOCK, ~[], ~[KILL STOP RTMIN RT_1 RT_2], 8) = 0
+283   fork()                            = 310
+283   rt_sigprocmask(SIG_SETMASK, ~[KILL STOP RTMIN RT_1 RT_2],  <unfinished ...>
+310   gettid( <unfinished ...>
+283   <... rt_sigprocmask resumed>NULL, 8) = 0
+283   rt_sigprocmask(SIG_SETMASK, [],  <unfinished ...>
+310   <... gettid resumed>)             = 310
+283   <... rt_sigprocmask resumed>NULL, 8) = 0
+283   wait4(-1,  <unfinished ...>
+310   rt_sigprocmask(SIG_SETMASK, ~[KILL STOP RTMIN RT_1 RT_2], NULL, 8) = 0
+310   rt_sigprocmask(SIG_SETMASK, [], NULL, 8) = 0
+310   close(10)                         = 0
+310   rt_sigaction(SIGQUIT, {sa_handler=SIG_DFL, sa_mask=~[RTMIN RT_1 RT_2], sa_flags=SA_RESTORER, sa_restorer=0x7e3f6d2d6a3b}, NULL, 8) = 0
+310   execve("./read", ["./read"], 0x7e3f6d677b30 /* 11 vars */) = 0
+310   brk(NULL)                         = 0x620e7aea7000
+310   mmap(NULL, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7eac17da8000
+310   access("/etc/ld.so.preload", R_OK) = -1 ENOENT (No such file or directory)
+310   arch_prctl(ARCH_SET_FS, 0x7eac17da8f00) = 0
+310   set_tid_address(0x7eac17da91d0)   = 310
+310   set_robust_list(0x7eac17da91e0, 24) = 0
+310   rseq(0x7eac17da9820, 0x20, 0, 0x53053053) = 0
+310   openat(AT_FDCWD, "./text.txt", O_RDONLY) = 3
+310   close(3)                          = 0
+310   exit(0)                           = ?
+310   +++ exited with 0 +++
+283   <... wait4 resumed>[{WIFEXITED(s) && WEXITSTATUS(s) == 0}], 0, NULL) = 310
+283   --- SIGCHLD {si_signo=SIGCHLD, si_code=CLD_EXITED, si_pid=310, si_uid=0, si_status=0, si_utime=0, si_stime=0} ---
+283   rt_sigreturn({mask=[]})           = 310
+283   wait4(-1, 0x7ffef8c7c1dc, WNOHANG, NULL) = -1 ECHILD (No child processes)
+283   rt_sigprocmask(SIG_BLOCK, ~[RTMIN RT_1 RT_2], [], 8) = 0
+283   rt_sigprocmask(SIG_BLOCK, ~[], ~[KILL STOP RTMIN RT_1 RT_2], 8) = 0
+283   fork()                            = 311
+283   rt_sigprocmask(SIG_SETMASK, ~[KILL STOP RTMIN RT_1 RT_2], NULL, 8) = 0
+311   gettid( <unfinished ...>
+283   rt_sigprocmask(SIG_SETMASK, [],  <unfinished ...>
+311   <... gettid resumed>)             = 311
+283   <... rt_sigprocmask resumed>NULL, 8) = 0
+283   wait4(-1,  <unfinished ...>
+311   rt_sigprocmask(SIG_SETMASK, ~[KILL STOP RTMIN RT_1 RT_2], NULL, 8) = 0
+311   rt_sigprocmask(SIG_SETMASK, [], NULL, 8) = 0
+311   close(10)                         = 0
+311   rt_sigaction(SIGQUIT, {sa_handler=SIG_DFL, sa_mask=~[RTMIN RT_1 RT_2], sa_flags=SA_RESTORER, sa_restorer=0x7e3f6d2d6a3b}, NULL, 8) = 0
+311   execve("./times", ["./times"], 0x7e3f6d677b40 /* 11 vars */) = 0
+311   brk(NULL)                         = 0x5f42245bc000
+311   mmap(NULL, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7bc308094000
+311   access("/etc/ld.so.preload", R_OK) = -1 ENOENT (No such file or directory)
+311   arch_prctl(ARCH_SET_FS, 0x7bc308094f00) = 0
+311   set_tid_address(0x7bc3080951d0)   = 311
+311   set_robust_list(0x7bc3080951e0, 24) = 0
+311   rseq(0x7bc308095820, 0x20, 0, 0x53053053) = 0
+311   times({tms_utime=0, tms_stime=0, tms_cutime=0, tms_cstime=0}) = 446618052
+311   exit(0)                           = ?
+311   +++ exited with 0 +++
+283   <... wait4 resumed>[{WIFEXITED(s) && WEXITSTATUS(s) == 0}], 0, NULL) = 311
+283   --- SIGCHLD {si_signo=SIGCHLD, si_code=CLD_EXITED, si_pid=311, si_uid=0, si_status=0, si_utime=0, si_stime=0} ---
+283   rt_sigreturn({mask=[]})           = 311
+283   wait4(-1, 0x7ffef8c7c1dc, WNOHANG, NULL) = -1 ECHILD (No child processes)
+283   rt_sigprocmask(SIG_BLOCK, ~[RTMIN RT_1 RT_2], [], 8) = 0
+283   rt_sigprocmask(SIG_BLOCK, ~[], ~[KILL STOP RTMIN RT_1 RT_2], 8) = 0
+283   fork()                            = 312
+283   rt_sigprocmask(SIG_SETMASK, ~[KILL STOP RTMIN RT_1 RT_2],  <unfinished ...>
+312   gettid( <unfinished ...>
+283   <... rt_sigprocmask resumed>NULL, 8) = 0
+283   rt_sigprocmask(SIG_SETMASK, [],  <unfinished ...>
+312   <... gettid resumed>)             = 312
+283   <... rt_sigprocmask resumed>NULL, 8) = 0
+283   wait4(-1,  <unfinished ...>
+312   rt_sigprocmask(SIG_SETMASK, ~[KILL STOP RTMIN RT_1 RT_2], NULL, 8) = 0
+312   rt_sigprocmask(SIG_SETMASK, [], NULL, 8) = 0
+312   close(10)                         = 0
+312   rt_sigaction(SIGQUIT, {sa_handler=SIG_DFL, sa_mask=~[RTMIN RT_1 RT_2], sa_flags=SA_RESTORER, sa_restorer=0x7e3f6d2d6a3b}, NULL, 8) = 0
+312   execve("./umount", ["./umount"], 0x7e3f6d677b60 /* 11 vars */) = 0
+312   brk(NULL)                         = 0x5e2a189ca000
+312   mmap(NULL, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x75c114fa7000
+312   access("/etc/ld.so.preload", R_OK) = -1 ENOENT (No such file or directory)
+312   arch_prctl(ARCH_SET_FS, 0x75c114fa7f00) = 0
+312   set_tid_address(0x75c114fa81d0)   = 312
+312   set_robust_list(0x75c114fa81e0, 24) = 0
+312   rseq(0x75c114fa8820, 0x20, 0, 0x53053053) = 0
+312   mount("/dev/vda2", "./mnt", "vfat", 0, NULL) = -1 ENOENT (No such file or directory)
+312   exit(0)                           = ?
+312   +++ exited with 0 +++
+283   <... wait4 resumed>[{WIFEXITED(s) && WEXITSTATUS(s) == 0}], 0, NULL) = 312
+283   --- SIGCHLD {si_signo=SIGCHLD, si_code=CLD_EXITED, si_pid=312, si_uid=0, si_status=0, si_utime=0, si_stime=0} ---
+283   rt_sigreturn({mask=[]})           = 312
+283   wait4(-1, 0x7ffef8c7c1dc, WNOHANG, NULL) = -1 ECHILD (No child processes)
+283   rt_sigprocmask(SIG_BLOCK, ~[RTMIN RT_1 RT_2], [], 8) = 0
+283   rt_sigprocmask(SIG_BLOCK, ~[], ~[KILL STOP RTMIN RT_1 RT_2], 8) = 0
+283   fork()                            = 313
+283   rt_sigprocmask(SIG_SETMASK, ~[KILL STOP RTMIN RT_1 RT_2], NULL, 8) = 0
+283   rt_sigprocmask(SIG_SETMASK, [], NULL, 8) = 0
+283   wait4(-1,  <unfinished ...>
+313   gettid()                          = 313
+313   rt_sigprocmask(SIG_SETMASK, ~[KILL STOP RTMIN RT_1 RT_2], NULL, 8) = 0
+313   rt_sigprocmask(SIG_SETMASK, [], NULL, 8) = 0
+313   close(10)                         = 0
+313   rt_sigaction(SIGQUIT, {sa_handler=SIG_DFL, sa_mask=~[RTMIN RT_1 RT_2], sa_flags=SA_RESTORER, sa_restorer=0x7e3f6d2d6a3b}, NULL, 8) = 0
+313   execve("./uname", ["./uname"], 0x7e3f6d677b60 /* 11 vars */) = 0
+313   brk(NULL)                         = 0x56f98a14a000
+313   mmap(NULL, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7bf8b2ac3000
+313   access("/etc/ld.so.preload", R_OK) = -1 ENOENT (No such file or directory)
+313   arch_prctl(ARCH_SET_FS, 0x7bf8b2ac3f00) = 0
+313   set_tid_address(0x7bf8b2ac41d0)   = 313
+313   set_robust_list(0x7bf8b2ac41e0, 24) = 0
+313   rseq(0x7bf8b2ac4820, 0x20, 0, 0x53053053) = 0
+313   uname({sysname="Linux", nodename="519485b23381", ...}) = 0
+313   exit(0)                           = ?
+313   +++ exited with 0 +++
+283   <... wait4 resumed>[{WIFEXITED(s) && WEXITSTATUS(s) == 0}], 0, NULL) = 313
+283   --- SIGCHLD {si_signo=SIGCHLD, si_code=CLD_EXITED, si_pid=313, si_uid=0, si_status=0, si_utime=0, si_stime=0} ---
+283   rt_sigreturn({mask=[]})           = 313
+283   wait4(-1, 0x7ffef8c7c1dc, WNOHANG, NULL) = -1 ECHILD (No child processes)
+283   rt_sigprocmask(SIG_BLOCK, ~[RTMIN RT_1 RT_2], [], 8) = 0
+283   rt_sigprocmask(SIG_BLOCK, ~[], ~[KILL STOP RTMIN RT_1 RT_2], 8) = 0
+283   fork()                            = 314
+314   gettid( <unfinished ...>
+283   rt_sigprocmask(SIG_SETMASK, ~[KILL STOP RTMIN RT_1 RT_2],  <unfinished ...>
+314   <... gettid resumed>)             = 314
+283   <... rt_sigprocmask resumed>NULL, 8) = 0
+314   rt_sigprocmask(SIG_SETMASK, ~[KILL STOP RTMIN RT_1 RT_2],  <unfinished ...>
+283   rt_sigprocmask(SIG_SETMASK, [],  <unfinished ...>
+314   <... rt_sigprocmask resumed>NULL, 8) = 0
+283   <... rt_sigprocmask resumed>NULL, 8) = 0
+314   rt_sigprocmask(SIG_SETMASK, [], NULL, 8) = 0
+283   wait4(-1,  <unfinished ...>
+314   close(10)                         = 0
+314   rt_sigaction(SIGQUIT, {sa_handler=SIG_DFL, sa_mask=~[RTMIN RT_1 RT_2], sa_flags=SA_RESTORER, sa_restorer=0x7e3f6d2d6a3b}, NULL, 8) = 0
+314   execve("./unlink", ["./unlink"], 0x7e3f6d677ae0 /* 11 vars */) = 0
+314   brk(NULL)                         = 0x5e4339939000
+314   mmap(NULL, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7085ac839000
+314   access("/etc/ld.so.preload", R_OK) = -1 ENOENT (No such file or directory)
+314   arch_prctl(ARCH_SET_FS, 0x7085ac839f00) = 0
+314   set_tid_address(0x7085ac83a1d0)   = 314
+314   set_robust_list(0x7085ac83a1e0, 24) = 0
+314   rseq(0x7085ac83a820, 0x20, 0, 0x53053053) = 0
+314   openat(AT_FDCWD, "./test_unlink", O_WRONLY|O_CREAT, 002) = 3
+314   close(3)                          = 0
+314   unlinkat(AT_FDCWD, "./test_unlink", 0) = 0
+314   openat(AT_FDCWD, "./test_unlink", O_RDONLY) = -1 ENOENT (No such file or directory)
+314   exit(0)                           = ?
+314   +++ exited with 0 +++
+283   <... wait4 resumed>[{WIFEXITED(s) && WEXITSTATUS(s) == 0}], 0, NULL) = 314
+283   --- SIGCHLD {si_signo=SIGCHLD, si_code=CLD_EXITED, si_pid=314, si_uid=0, si_status=0, si_utime=0, si_stime=0} ---
+283   rt_sigreturn({mask=[]})           = 314
+283   wait4(-1, 0x7ffef8c7c1dc, WNOHANG, NULL) = -1 ECHILD (No child processes)
+283   rt_sigprocmask(SIG_BLOCK, ~[RTMIN RT_1 RT_2], [], 8) = 0
+283   rt_sigprocmask(SIG_BLOCK, ~[], ~[KILL STOP RTMIN RT_1 RT_2], 8) = 0
+283   fork()                            = 315
+283   rt_sigprocmask(SIG_SETMASK, ~[KILL STOP RTMIN RT_1 RT_2],  <unfinished ...>
+315   gettid( <unfinished ...>
+283   <... rt_sigprocmask resumed>NULL, 8) = 0
+315   <... gettid resumed>)             = 315
+283   rt_sigprocmask(SIG_SETMASK, [],  <unfinished ...>
+315   rt_sigprocmask(SIG_SETMASK, ~[KILL STOP RTMIN RT_1 RT_2],  <unfinished ...>
+283   <... rt_sigprocmask resumed>NULL, 8) = 0
+315   <... rt_sigprocmask resumed>NULL, 8) = 0
+283   wait4(-1,  <unfinished ...>
+315   rt_sigprocmask(SIG_SETMASK, [], NULL, 8) = 0
+315   close(10)                         = 0
+315   rt_sigaction(SIGQUIT, {sa_handler=SIG_DFL, sa_mask=~[RTMIN RT_1 RT_2], sa_flags=SA_RESTORER, sa_restorer=0x7e3f6d2d6a3b}, NULL, 8) = 0
+315   execve("./wait", ["./wait"], 0x7e3f6d677ae0 /* 11 vars */) = 0
+315   brk(NULL)                         = 0x593cb943e000
+315   mmap(NULL, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7eaeedce5000
+315   access("/etc/ld.so.preload", R_OK) = -1 ENOENT (No such file or directory)
+315   arch_prctl(ARCH_SET_FS, 0x7eaeedce5f00) = 0
+315   set_tid_address(0x7eaeedce61d0)   = 315
+315   set_robust_list(0x7eaeedce61e0, 24) = 0
+315   rseq(0x7eaeedce6820, 0x20, 0, 0x53053053) = 0
+315   clone(child_stack=NULL, flags=SIGCHLD) = 316
+315   wait4(-1,  <unfinished ...>
+316   exit(0)                           = ?
+316   +++ exited with 0 +++
+315   <... wait4 resumed>[{WIFEXITED(s) && WEXITSTATUS(s) == 0}], 0, NULL) = 316
+315   --- SIGCHLD {si_signo=SIGCHLD, si_code=CLD_EXITED, si_pid=316, si_uid=0, si_status=0, si_utime=0, si_stime=0} ---
+315   exit(0)                           = ?
+315   +++ exited with 0 +++
+283   <... wait4 resumed>[{WIFEXITED(s) && WEXITSTATUS(s) == 0}], 0, NULL) = 315
+283   --- SIGCHLD {si_signo=SIGCHLD, si_code=CLD_EXITED, si_pid=315, si_uid=0, si_status=0, si_utime=0, si_stime=0} ---
+283   rt_sigreturn({mask=[]})           = 315
+283   wait4(-1, 0x7ffef8c7c1dc, WNOHANG, NULL) = -1 ECHILD (No child processes)
+283   rt_sigprocmask(SIG_BLOCK, ~[RTMIN RT_1 RT_2], [], 8) = 0
+283   rt_sigprocmask(SIG_BLOCK, ~[], ~[KILL STOP RTMIN RT_1 RT_2], 8) = 0
+283   fork()                            = 317
+283   rt_sigprocmask(SIG_SETMASK, ~[KILL STOP RTMIN RT_1 RT_2],  <unfinished ...>
+317   gettid( <unfinished ...>
+283   <... rt_sigprocmask resumed>NULL, 8) = 0
+317   <... gettid resumed>)             = 317
+283   rt_sigprocmask(SIG_SETMASK, [],  <unfinished ...>
+317   rt_sigprocmask(SIG_SETMASK, ~[KILL STOP RTMIN RT_1 RT_2],  <unfinished ...>
+283   <... rt_sigprocmask resumed>NULL, 8) = 0
+317   <... rt_sigprocmask resumed>NULL, 8) = 0
+283   wait4(-1,  <unfinished ...>
+317   rt_sigprocmask(SIG_SETMASK, [], NULL, 8) = 0
+317   close(10)                         = 0
+317   rt_sigaction(SIGQUIT, {sa_handler=SIG_DFL, sa_mask=~[RTMIN RT_1 RT_2], sa_flags=SA_RESTORER, sa_restorer=0x7e3f6d2d6a3b}, NULL, 8) = 0
+317   execve("./waitpid", ["./waitpid"], 0x7e3f6d677b00 /* 11 vars */) = 0
+317   brk(NULL)                         = 0x609325505000
+317   mmap(NULL, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7d27a1bcf000
+317   access("/etc/ld.so.preload", R_OK) = -1 ENOENT (No such file or directory)
+317   arch_prctl(ARCH_SET_FS, 0x7d27a1bcff00) = 0
+317   set_tid_address(0x7d27a1bd01d0)   = 317
+317   set_robust_list(0x7d27a1bd01e0, 24) = 0
+317   rseq(0x7d27a1bd0820, 0x20, 0, 0x53053053) = 0
+317   clone(child_stack=NULL, flags=SIGCHLD) = 318
+317   wait4(318,  <unfinished ...>
+318   sched_yield()                     = 0
+318   exit(3)                           = ?
+318   +++ exited with 3 +++
+317   <... wait4 resumed>[{WIFEXITED(s) && WEXITSTATUS(s) == 3}], 0, NULL) = 318
+317   --- SIGCHLD {si_signo=SIGCHLD, si_code=CLD_EXITED, si_pid=318, si_uid=0, si_status=3, si_utime=0, si_stime=0} ---
+317   exit(0)                           = ?
+317   +++ exited with 0 +++
+283   <... wait4 resumed>[{WIFEXITED(s) && WEXITSTATUS(s) == 0}], 0, NULL) = 317
+283   --- SIGCHLD {si_signo=SIGCHLD, si_code=CLD_EXITED, si_pid=317, si_uid=0, si_status=0, si_utime=0, si_stime=0} ---
+283   rt_sigreturn({mask=[]})           = 317
+283   wait4(-1, 0x7ffef8c7c1dc, WNOHANG, NULL) = -1 ECHILD (No child processes)
+283   rt_sigprocmask(SIG_BLOCK, ~[RTMIN RT_1 RT_2], [], 8) = 0
+283   rt_sigprocmask(SIG_BLOCK, ~[], ~[KILL STOP RTMIN RT_1 RT_2], 8) = 0
+283   fork()                            = 319
+283   rt_sigprocmask(SIG_SETMASK, ~[KILL STOP RTMIN RT_1 RT_2], NULL, 8) = 0
+283   rt_sigprocmask(SIG_SETMASK, [], NULL, 8) = 0
+283   wait4(-1,  <unfinished ...>
+319   gettid()                          = 319
+319   rt_sigprocmask(SIG_SETMASK, ~[KILL STOP RTMIN RT_1 RT_2], NULL, 8) = 0
+319   rt_sigprocmask(SIG_SETMASK, [], NULL, 8) = 0
+319   close(10)                         = 0
+319   rt_sigaction(SIGQUIT, {sa_handler=SIG_DFL, sa_mask=~[RTMIN RT_1 RT_2], sa_flags=SA_RESTORER, sa_restorer=0x7e3f6d2d6a3b}, NULL, 8) = 0
+319   execve("./write", ["./write"], 0x7e3f6d677b00 /* 11 vars */) = 0
+319   brk(NULL)                         = 0x5bda7f1b5000
+319   mmap(NULL, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7e33f804c000
+319   access("/etc/ld.so.preload", R_OK) = -1 ENOENT (No such file or directory)
+319   arch_prctl(ARCH_SET_FS, 0x7e33f804cf00) = 0
+319   set_tid_address(0x7e33f804d1d0)   = 319
+319   set_robust_list(0x7e33f804d1e0, 24) = 0
+319   rseq(0x7e33f804d820, 0x20, 0, 0x53053053) = 0
+319   exit(0)                           = ?
+319   +++ exited with 0 +++
+283   <... wait4 resumed>[{WIFEXITED(s) && WEXITSTATUS(s) == 0}], 0, NULL) = 319
+283   --- SIGCHLD {si_signo=SIGCHLD, si_code=CLD_EXITED, si_pid=319, si_uid=0, si_status=0, si_utime=0, si_stime=0} ---
+283   rt_sigreturn({mask=[]})           = 319
+283   wait4(-1, 0x7ffef8c7c1dc, WNOHANG, NULL) = -1 ECHILD (No child processes)
+283   rt_sigprocmask(SIG_BLOCK, ~[RTMIN RT_1 RT_2], [], 8) = 0
+283   rt_sigprocmask(SIG_BLOCK, ~[], ~[KILL STOP RTMIN RT_1 RT_2], 8) = 0
+283   fork()                            = 320
+320   gettid( <unfinished ...>
+283   rt_sigprocmask(SIG_SETMASK, ~[KILL STOP RTMIN RT_1 RT_2],  <unfinished ...>
+320   <... gettid resumed>)             = 320
+283   <... rt_sigprocmask resumed>NULL, 8) = 0
+320   rt_sigprocmask(SIG_SETMASK, ~[KILL STOP RTMIN RT_1 RT_2],  <unfinished ...>
+283   rt_sigprocmask(SIG_SETMASK, [],  <unfinished ...>
+320   <... rt_sigprocmask resumed>NULL, 8) = 0
+283   <... rt_sigprocmask resumed>NULL, 8) = 0
+320   rt_sigprocmask(SIG_SETMASK, [],  <unfinished ...>
+283   wait4(-1,  <unfinished ...>
+320   <... rt_sigprocmask resumed>NULL, 8) = 0
+320   close(10)                         = 0
+320   rt_sigaction(SIGQUIT, {sa_handler=SIG_DFL, sa_mask=~[RTMIN RT_1 RT_2], sa_flags=SA_RESTORER, sa_restorer=0x7e3f6d2d6a3b}, NULL, 8) = 0
+320   execve("./yield", ["./yield"], 0x7e3f6d677b10 /* 11 vars */) = 0
+320   brk(NULL)                         = 0x5c628458f000
+320   mmap(NULL, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x71644e4a4000
+320   access("/etc/ld.so.preload", R_OK) = -1 ENOENT (No such file or directory)
+320   arch_prctl(ARCH_SET_FS, 0x71644e4a4f00) = 0
+320   set_tid_address(0x71644e4a51d0)   = 320
+320   set_robust_list(0x71644e4a51e0, 24) = 0
+320   rseq(0x71644e4a5820, 0x20, 0, 0x53053053) = 0
+320   clone(child_stack=NULL, flags=SIGCHLD) = 321
+320   clone(child_stack=NULL, flags=SIGCHLD <unfinished ...>
+321   sched_yield()                     = 0
+321   getpid()                          = 321
+320   <... clone resumed>)              = 322
+322   sched_yield( <unfinished ...>
+320   clone(child_stack=NULL, flags=SIGCHLD <unfinished ...>
+322   <... sched_yield resumed>)        = 0
+322   getpid()                          = 322
+320   <... clone resumed>)              = 323
+323   sched_yield( <unfinished ...>
+320   wait4(-1,  <unfinished ...>
+323   <... sched_yield resumed>)        = 0
+323   getpid()                          = 323
+321   sched_yield()                     = 0
+321   getpid()                          = 321
+322   sched_yield()                     = 0
+322   getpid()                          = 322
+323   sched_yield()                     = 0
+323   getpid()                          = 323
+321   sched_yield()                     = 0
+321   getpid( <unfinished ...>
+322   sched_yield( <unfinished ...>
+321   <... getpid resumed>)             = 321
+322   <... sched_yield resumed>)        = 0
+323   sched_yield()                     = 0
+322   getpid( <unfinished ...>
+323   getpid( <unfinished ...>
+322   <... getpid resumed>)             = 322
+323   <... getpid resumed>)             = 323
+323   sched_yield( <unfinished ...>
+321   sched_yield( <unfinished ...>
+323   <... sched_yield resumed>)        = 0
+323   getpid( <unfinished ...>
+321   <... sched_yield resumed>)        = 0
+323   <... getpid resumed>)             = 323
+321   getpid()                          = 321
+322   sched_yield()                     = 0
+322   getpid()                          = 322
+323   sched_yield()                     = 0
+323   getpid()                          = 323
+321   sched_yield()                     = 0
+321   getpid()                          = 321
+323   exit(0 <unfinished ...>
+322   sched_yield( <unfinished ...>
+323   <... exit resumed>)               = ?
+322   <... sched_yield resumed>)        = 0
+322   getpid( <unfinished ...>
+323   +++ exited with 0 +++
+322   <... getpid resumed>)             = 322
+320   <... wait4 resumed>NULL, 0, NULL) = 323
+320   --- SIGCHLD {si_signo=SIGCHLD, si_code=CLD_EXITED, si_pid=323, si_uid=0, si_status=0, si_utime=0, si_stime=0} ---
+320   wait4(-1,  <unfinished ...>
+321   exit(0)                           = ?
+321   +++ exited with 0 +++
+320   <... wait4 resumed>NULL, 0, NULL) = 321
+322   exit(0)                           = ?
+320   --- SIGCHLD {si_signo=SIGCHLD, si_code=CLD_EXITED, si_pid=321, si_uid=0, si_status=0, si_utime=0, si_stime=0} ---
+320   wait4(-1,  <unfinished ...>
+322   +++ exited with 0 +++
+320   <... wait4 resumed>NULL, 0, NULL) = 322
+320   --- SIGCHLD {si_signo=SIGCHLD, si_code=CLD_EXITED, si_pid=322, si_uid=0, si_status=0, si_utime=0, si_stime=0} ---
+320   exit(0)                           = ?
+320   +++ exited with 0 +++
+283   <... wait4 resumed>[{WIFEXITED(s) && WEXITSTATUS(s) == 0}], 0, NULL) = 320
+283   --- SIGCHLD {si_signo=SIGCHLD, si_code=CLD_EXITED, si_pid=320, si_uid=0, si_status=0, si_utime=0, si_stime=0} ---
+283   rt_sigreturn({mask=[]})           = 320
+283   wait4(-1, 0x7ffef8c7c1dc, WNOHANG, NULL) = -1 ECHILD (No child processes)
+283   munmap(0x7e3f6d674000, 4096)      = 0
+283   exit_group(0)                     = ?
+283   +++ exited with 0 +++
